@@ -1,0 +1,38 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body
+{
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container
+{
+    font-size: 3rem;
+}
+.typewriter
+{
+    color: #00ff88;
+    border-right: 3px solid #00ff88;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink
+{
+    0%, 100%
+    {
+        border-color: #00ff88;
+    }
+    50%
+    {
+        border-color: transparent;
+    }
+}
