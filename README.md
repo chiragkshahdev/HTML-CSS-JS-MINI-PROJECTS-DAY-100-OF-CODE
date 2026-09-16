@@ -4,7 +4,7 @@
 
 **Repo:** `HTML-CSS-JS-MINI-PROJECTS-DAY-100-OF-CODE`
 **Owner:** Chirag Kiran Shah
-**Started:** 21 Aug 2024 | **Location:** Virar, Maharashtra
+**Started:** 15 Sep 2026 | **Location:** Virar, Maharashtra
 
 ---
 
