@@ -4,7 +4,7 @@ Simple typewriter animation using HTML, CSS, & JS.
 
 
 ### Demo
-[file:///C:/Users/Chirag/OneDrive/Desktop/HTML-CSS-JS-MINI-PROJECTS-DAY-100-OF-CODE/Day-02-Typewriter-Effect/index.html]
+[Live Preview Link]
 
 ### Tech Used
 - HTML5
