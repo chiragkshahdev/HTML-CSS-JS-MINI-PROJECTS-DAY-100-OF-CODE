@@ -1,0 +1,51 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI'}
+body{
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+.container{
+    text-align:center;
+    background:rgba(255,255,255,0.1);
+    padding:50px 60px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+.container h1{
+    letter-spacing:4px;
+    margin-bottom:20px;
+    font-size:1.2rem;
+    opacity:0.8;
+}
+.clock{
+    font-size:4rem;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+#ampm{
+    font-size:1.5rem;
+    background:#ff6b6b;
+    padding:5px 12px;
+    border-radius:10px;
+    margin-left:10px;
+}
+.date{
+    margin-top:20px;
+    font-size:1.1rem;
+    letter-spacing:1px;
+    opacity:0.9;
+}
+.container p{margin-top:15px;font-size:0.9rem;opacity:0.6}
+
+@media(max-width:600px){
+    .clock{font-size:2.5rem}
+    .container{padding:30px 20px}
+}
