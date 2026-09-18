@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #0a0a0a;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo{
+  color: #fff;
+  font-size: 2em;
+}
+.navigation a{
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+.navigation a:hover, .navigation a.active{
+  background: #fff;
+  color: #000;
+}
+.parallax{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.parallax img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+#text{
+  position: absolute;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+  z-index: 10;
+}
+#mountain{
+  z-index: 11;
+  top: auto;
+  bottom: -100px;
+}
+.sec{
+  position: relative;
+  background: #0a0a0a;
+  padding: 100px;
+  color: #fff;
+  z-index: 20;
+}
+.sec h2{
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.sec p{
+  font-size: 1.1em;
+  font-weight: 300;
+}
