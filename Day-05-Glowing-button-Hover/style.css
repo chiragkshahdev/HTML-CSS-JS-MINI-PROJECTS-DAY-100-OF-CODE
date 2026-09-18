@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#0e0e0e;
+}
+
+.container{
+    display:flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.glowing-btn{
+    position: relative;
+    display: inline-block;
+    padding: 20px 45px;
+    background: #111;
+    color: var(--clr, #00e5ff);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 2px solid #222;
+}
+
+.glowing-btn:hover{
+    background: var(--clr, #00e5ff);
+    color: #111;
+    box-shadow: 0 0 10px var(--clr, #00e5ff),
+                0 0 30px var(--clr, #00e5ff),
+                0 0 60px var(--clr, #00e5ff);
+    border-color: var(--clr, #00e5ff);
+    transform: scale(1.05);
+}
+
+.btn-text{
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional moving border glow */
+.glowing-btn::before{
+    content:'';
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, var(--clr, #00e5ff), transparent, var(--clr, #00e5ff));
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.glowing-btn:hover::before{
+    opacity: 1;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
