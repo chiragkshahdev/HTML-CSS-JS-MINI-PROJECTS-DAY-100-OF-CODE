@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 - Image Slider Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1 class="title">Image Slider / Carousel</h1>
+    <div class="slider-container" id="slider-container">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200">
+                <div class="caption">Nature - 01</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200">
+                <div class="caption">Forest - 02</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200">
+                <div class="caption">Lake View - 03</div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200">
+                <div class="caption">Misty Mountains - 04</div>
+            </div>
+        </div>
+
+        <button class="btn prev" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn next" id="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="dots" id="dots"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
