@@ -1,6 +1,6 @@
 # 🚀 100 Days Of Code - 100 Mini Projects | HTML CSS JavaScript
 
-> **Ek din, ek project, ek naya skill.** Krrish se lekar full E-commerce tak ka safar.
+> **One Day, One project, One New skill.** Krrish To full E-commerce Till Life.
 
 **Repo:** `HTML-CSS-JS-MINI-PROJECTS-DAY-100-OF-CODE`
 **Owner:** Chirag Kiran Shah
