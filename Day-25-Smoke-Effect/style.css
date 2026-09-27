@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #0a0a0a;
+    overflow: hidden;
+    cursor: none;
+}
+#canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+.info {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    pointer-events: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+.info h1 {
+    letter-spacing: 8px;
+    font-size: 24px;
+    opacity: 0.8;
+}
+.info p {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
