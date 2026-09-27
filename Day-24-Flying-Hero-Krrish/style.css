@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; background: #050a1a; font-family: monospace; }
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0a1931 0%, #1a3a6a 40%, #ff6b35 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.city {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 30%;
+    background: repeating-linear-gradient(90deg, #000 0 40px, #111 40px 80px);
+    opacity: 0.6;
+    animation: cityMove 8s linear infinite;
+}
+
+@keyframes cityMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.krrish {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 70px;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 20px #00ffff);
+    transition: transform 0.2s ease-out;
+    z-index: 10;
+}
+
+.krrish.flying {
+    animation: hover 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes hover {
+    from { transform: translate(-50%, -52%); }
+    to { transform: translate(-50%, -48%); }
+}
+
+.cape {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 60px;
+    height: 80px;
+    background: #000;
+    border-radius: 0 0 30px 30px;
+    z-index: -1;
+    animation: capeWave 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes capeWave {
+    from { transform: skewY(-10deg); }
+    to { transform: skewY(10deg); }
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #00ffff;
+}
+.controls h2 { color: #00ffff; letter-spacing: 5px; }
+.altitude { margin-top: 10px; color: #ff0; }
+
+.krrish.super-speed {
+    filter: drop-shadow(0 0 40px #ff0) blur(1px);
+    transform: translate(-50%, -50%) scale(1.2) !important;
+}
