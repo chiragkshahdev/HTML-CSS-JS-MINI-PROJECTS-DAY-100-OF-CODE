@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 26 - Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">Day 26 of 100 Days of Code</p>
+
+        <div class="scoreboard">
+            <div class="score-box">
+                <span>You</span>
+                <h2 id="player-score">0</h2>
+            </div>
+            <div class="score-box">
+                <span>Computer</span>
+                <h2 id="computer-score">0</h2>
+            </div>
+        </div>
+
+        <div class="result-area">
+            <div class="choice-display">
+                <div class="choice">
+                    <span id="player-choice">❔</span>
+                    <p>Your Choice</p>
+                </div>
+                <div class="vs">VS</div>
+                <div class="choice">
+                    <span id="computer-choice">❔</span>
+                    <p>Computer</p>
+                </div>
+            </div>
+            <h2 id="result-text">Choose your move!</h2>
+        </div>
+
+        <div class="buttons">
+            <button class="btn" data-choice="rock">✊<br>Rock</button>
+            <button class="btn" data-choice="paper">✋<br>Paper</button>
+            <button class="btn" data-choice="scissors">✌️<br>Scissors</button>
+        </div>
+
+        <button id="reset">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

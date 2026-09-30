@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.score-box span {
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.score-box h2 {
+    font-size: 32px;
+    color: #764ba2;
+}
+
+.choice-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.choice span {
+    font-size: 50px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #f0f0ff;
+    border-radius: 50%;
+}
+
+.choice p {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+.vs {
+    font-weight: 700;
+    color: #764ba2;
+}
+
+#result-text {
+    font-size: 22px;
+    margin: 15px 0;
+    min-height: 32px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #764ba2;
+    background: white;
+    color: #764ba2;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-3px);
+}
+
+#reset {
+    background: #eee;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+#reset:hover {
+    background: #ddd;
+}
+
+.win { color: #2ecc71!important; }
+.lose { color: #e74c3c!important; }
+.draw { color: #f39c12!important; }
