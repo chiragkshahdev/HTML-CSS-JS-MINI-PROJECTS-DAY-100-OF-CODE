@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 30 - 3D Flip Login Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Day 30 - 3D Flip Form</h1>
+    <div class="scene">
+      <div class="card" id="card">
+        <!-- FRONT = LOGIN -->
+        <div class="card-face front-face">
+          <h2>Login</h2>
+          <input type="email" id="loginEmail" placeholder="Email">
+          <input type="password" id="loginPass" placeholder="Password">
+          <button class="main-btn" id="loginBtn">Login</button>
+          <p class="switch-text">No account? <span id="toSignup">Sign Up</span></p>
+        </div>
+        <!-- BACK = SIGNUP -->
+        <div class="card-face back-face">
+          <h2>Sign Up</h2>
+          <input type="text" id="signupName" placeholder="Full Name">
+          <input type="email" id="signupEmail" placeholder="Email">
+          <input type="password" id="signupPass" placeholder="Password">
+          <button class="main-btn" id="signupBtn">Create Account</button>
+          <p class="switch-text">Have account? <span id="toLogin">Login</span></p>
+        </div>
+      </div>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
