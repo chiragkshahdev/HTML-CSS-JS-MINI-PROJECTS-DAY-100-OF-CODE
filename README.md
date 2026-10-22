@@ -23,6 +23,25 @@
 | 09 | Responsive Navbar | [Code](./Day-09-Responsive-Navbar/) |
 | 10 | Digital Clock | [Code](./Day-10-Digital-Clock/) |
 | 11 | Calculator | [Code](./Day-11-Calculator/) |
+| 12 | Todo List App | [Code](./Day-12-Todo-List-App/) |
+| 13 | Quiz App | [Code](./Day-13-Quiz-App/) |
+| 14 | Weather Card UI | [Code](./Day-14-Weather-Card-UI/) |
+| 15 | Image Slider | [Code](./Day-15-Image-Slider) |
+| 16 | Iron Man Arc Reactor | [Code](./Day-16-Iron-Man-Arc-Reactor) |
+| 17 | Avengers Logo Animation | [Code](./Day-17-Avengers-Logo-Animation/) |
+| 18 | Glassmorphism Profile Card | [Code](./Day-18-Glassmorphism-Profile-Card/) |
+| 19 | Neumorphism Dashboard | [Code](./Day-19-Neumorphism-Dashboard) |
+| 20 | Spiderman Web Shooter Effect | [Code](./Day-20-Spiderman-Web-Shooter-Effect) |
+| 21 | Krrish Mask Loader | [Code](./Day-21-Krrish-Mask-Loader) |
+| 22 | Bouncing Ball Physics | [Code](./Day-22-Bouncing-Ball-Physics) |
+| 23 | Falling Aeroplane | [Code](./Day-23-Falling-Aeroplane) |
+| 24 | Flying Hero Krrish | [Code](./Day-24-Flying-Hero-Krrish) |
+| 25 | Smoke Effect | [Code](./Day-25-Smoke-Effect) |
+| 26 | Rock Paper Scissors UI | [Code](./Day-26-Rock-Paper-Scissors-UI) |
+| 27 | Tic Tac Toe Game | [Code](./Day-27-Tic-Tac-Toe-Game) |
+| 28 | Memory Flip Card Game | [Code](./Day-28-Memory-Flip-Card-Game) |
+| 29 | 3D Cube Rotation | [Code](./Day-29-3D-Cube-Rotation) |
+| 30 | 3D Flip Login Form | [Code](./Day-30-3D-Flip-Login-Form) |
 ---
 
 ## 🗺️ COMPLETE ROADMAP - DAY 1 TO DAY 100
