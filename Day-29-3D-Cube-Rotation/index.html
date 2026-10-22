@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 29 - 3D Cube Rotation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧊 3D Cube - Day 29</h1>
+    <div class="scene">
+      <div class="cube" id="cube">
+        <div class="face front">FRONT</div>
+        <div class="face back">BACK</div>
+        <div class="face right">RIGHT</div>
+        <div class="face left">LEFT</div>
+        <div class="face top">TOP</div>
+        <div class="face bottom">BOTTOM</div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="autoBtn">⏸️ Pause Auto</button>
+      <button id="resetBtn">🔄 Reset</button>
+      <div class="sliders">
+        <label>Speed: <input type="range" id="speed" min="0" max="5" value="2" step="0.5"></label>
+        <label>Zoom: <input type="range" id="zoom" min="0.5" max="2" value="1" step="0.1"></label>
+      </div>
+      <p class="hint">👆 Drag to rotate cube | Scroll to zoom</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
