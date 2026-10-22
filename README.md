@@ -22,7 +22,7 @@
 | 08 | Color Flipper | [Code](./Day-08-Color-Flipper/) |
 | 09 | Responsive Navbar | [Code](./Day-09-Responsive-Navbar/) |
 | 10 | Digital Clock | [Code](./Day-10-Digital-Clock/) |
-
+| 11 | Calculator | [Code](./Day-11-Calculator/) |
 ---
 
 ## 🗺️ COMPLETE ROADMAP - DAY 1 TO DAY 100
