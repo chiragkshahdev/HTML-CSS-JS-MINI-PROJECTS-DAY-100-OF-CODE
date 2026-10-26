@@ -1,0 +1,38 @@
+body{
+  margin:0; height:100vh; display:flex;
+  justify-content:center; align-items:center;
+  background:#10101a; font-family:sans-serif;
+}
+.container{
+  background:#1e1e2a; width:350px; padding:30px;
+  border-radius:20px; color:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+.container h1{ text-align:center; margin-top:0; }
+.result-box{
+  display:flex; background:#2d2d3a;
+  border-radius:10px; overflow:hidden; margin:20px 0;
+}
+.result-box input{
+  flex:1; background:transparent; border:none;
+  outline:none; color:#fff; padding:15px; font-size:18px;
+}
+.result-box button{
+  background:#6c5ce7; border:none; color:#fff;
+  padding:0 15px; cursor:pointer; font-size:18px;
+}
+.settings{ margin:20px 0; }
+.setting{
+  display:flex; justify-content:space-between;
+  margin:12px 0; font-size:15px;
+}
+.setting input[type="number"]{
+  width:60px; border:none; border-radius:5px;
+  padding:5px; text-align:center;
+}
+#generateBtn{
+  width:100%; background:#6c5ce7; border:none;
+  color:#fff; padding:15px; border-radius:10px;
+  font-size:16px; font-weight:600; cursor:pointer;
+}
+#generateBtn:active{ transform:scale(0.98); }
