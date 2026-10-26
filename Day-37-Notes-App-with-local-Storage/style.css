@@ -1,0 +1,46 @@
+body{
+  margin:0; background:#10101a; font-family:sans-serif;
+  display:flex; justify-content:center; padding:30px;
+}
+.app{
+  width:100%; max-width:700px; color:#fff;
+}
+.app h1{ text-align:center; }
+#search{
+  width:100%; padding:12px; border-radius:10px;
+  border:none; outline:none; margin-bottom:20px;
+  font-size:16px; box-sizing:border-box;
+}
+.add-note{
+  background:#1e1e2a; padding:20px; border-radius:15px;
+  margin-bottom:20px;
+}
+.add-note input, .add-note textarea{
+  width:100%; background:#2d2d3a; border:none;
+  outline:none; color:#fff; padding:12px;
+  border-radius:10px; margin-bottom:10px;
+  font-size:15px; box-sizing:border-box;
+}
+.add-note textarea{ height:80px; resize:none; }
+#saveBtn{
+  background:#6c5ce7; color:#fff; border:none;
+  padding:10px 20px; border-radius:8px; cursor:pointer;
+  font-weight:600;
+}
+.notes{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:15px;
+}
+.note-card{
+  background:#2d2d3a; padding:15px; border-radius:12px;
+  position:relative;
+}
+.note-card h3{ margin:0 0 8px 0; font-size:18px; }
+.note-card p{ margin:0; opacity:0.8; font-size:14px; word-break:break-word; }
+.note-card small{ display:block; margin-top:10px; opacity:0.5; font-size:12px; }
+.delete{
+  position:absolute; top:10px; right:10px;
+  background:#d63031; border:none; color:#fff;
+  width:22px; height:22px; border-radius:50%;
+  cursor:pointer;
+}
