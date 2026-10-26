@@ -1,0 +1,45 @@
+body{
+  margin:0; background:#050510; height:100vh;
+  display:flex; justify-content:center; align-items:center;
+  overflow:hidden; font-family: sans-serif;
+}
+.title{
+  position:absolute; top:20px; color:#fff; letter-spacing:4px; opacity:0.7;
+}
+.solar-system{ position:relative; width:800px; height:800px; }
+.sun{
+  position:absolute; top:50%; left:50%;
+  width:60px; height:60px; background:#ffcc00;
+  border-radius:50%; transform:translate(-50%,-50%);
+  box-shadow:0 0 40px #ffcc00, 0 0 80px #ff9900;
+}
+.orbit{
+  position:absolute; top:50%; left:50%;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%; transform:translate(-50%,-50%);
+}
+.planet{ position:absolute; top:0; left:50%; border-radius:50%; transform:translateX(-50%); }
+
+/* Orbits Size */
+.mercury-orbit{ width:100px; height:100px; animation: rotate 3s linear infinite; }
+.venus-orbit{ width:160px; height:160px; animation: rotate 6s linear infinite; }
+.earth-orbit{ width:230px; height:230px; animation: rotate 10s linear infinite; }
+.mars-orbit{ width:300px; height:300px; animation: rotate 15s linear infinite; }
+.jupiter-orbit{ width:400px; height:400px; animation: rotate 25s linear infinite; }
+.saturn-orbit{ width:500px; height:500px; animation: rotate 35s linear infinite; }
+.uranus-orbit{ width:600px; height:600px; animation: rotate 45s linear infinite; }
+.neptune-orbit{ width:700px; height:700px; animation: rotate 60s linear infinite; }
+
+/* Planets */
+.mercury{ width:8px; height:8px; background:#a9a9a9; }
+.venus{ width:12px; height:12px; background:#e6bc73; }
+.earth{ width:14px; height:14px; background:#2b82c9; }
+.moon{ width:4px; height:4px; background:#fff; border-radius:50%; margin-left:16px; }
+.mars{ width:10px; height:10px; background:#c1440e; }
+.jupiter{ width:30px; height:30px; background:#d8ca9d; }
+.saturn{ width:22px; height:22px; background:#f7ec4f; }
+.ring{ width:36px; height:10px; border:2px solid #fff; border-radius:50%; position:absolute; top:6px; left:-9px; opacity:0.5; }
+.uranus{ width:18px; height:18px; background:#43b0f1; }
+.neptune{ width:18px; height:18px; background:#2d68f0; }
+
+@keyframes rotate{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
