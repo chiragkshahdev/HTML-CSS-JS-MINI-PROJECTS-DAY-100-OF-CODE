@@ -1,0 +1,33 @@
+body{
+  margin:0; background:#10101a; font-family:sans-serif;
+  display:flex; justify-content:center; padding:30px;
+  color:#fff;
+}
+.container{ width:100%; max-width:600px; }
+.container h1{ text-align:center; }
+.search{
+  display:flex; gap:10px; margin:20px 0;
+}
+.search input{
+  flex:1; padding:12px; border-radius:10px; border:none;
+  outline:none; background:#1e1e2a; color:#fff; font-size:16px;
+}
+.search button{
+  background:#6c5ce7; color:#fff; border:none;
+  padding:12px 20px; border-radius:10px; cursor:pointer;
+  font-weight:600;
+}
+.profile{
+  background:#1e1e2a; border-radius:20px; padding:25px;
+  display:none;
+}
+.profile.show{ display:block; }
+.profile-top{ display:flex; gap:20px; align-items:center; }
+.profile-top img{ width:100px; height:100px; border-radius:50%; }
+.stats{ display:flex; gap:15px; margin:20px 0; }
+.stat{ background:#2d2d3a; padding:10px 15px; border-radius:10px; text-align:center; flex:1; }
+.stat h3{ margin:0; }
+.stat p{ margin:0; font-size:12px; opacity:0.6; }
+.repos{ margin-top:20px; }
+.repo{ background:#2d2d3a; padding:10px; border-radius:8px; margin:8px 0; display:flex; justify-content:space-between; }
+.repo a{ color:#6c5ce7; text-decoration:none; }
