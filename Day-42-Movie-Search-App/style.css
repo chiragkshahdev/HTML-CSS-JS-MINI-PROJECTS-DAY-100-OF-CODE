@@ -1,0 +1,31 @@
+body{
+  margin:0; background:#10101a; font-family:sans-serif;
+  padding:30px; color:#fff;
+}
+.app{ max-width:1000px; margin:auto; }
+.app h1{ text-align:center; }
+.search{
+  display:flex; gap:10px; max-width:500px; margin:20px auto;
+}
+.search input{
+  flex:1; padding:12px; border-radius:10px; border:none;
+  outline:none; background:#1e1e2a; color:#fff; font-size:16px;
+}
+.search button{
+  background:#6c5ce7; color:#fff; border:none;
+  padding:12px 20px; border-radius:10px; cursor:pointer;
+  font-weight:600;
+}
+.movies{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:20px; margin-top:30px;
+}
+.movie-card{
+  background:#1e1e2a; border-radius:15px; overflow:hidden;
+  transition:0.3s;
+}
+.movie-card:hover{ transform:scale(1.05); }
+.movie-card img{ width:100%; height:280px; object-fit:cover; }
+.movie-card .info{ padding:15px; }
+.movie-card h3{ margin:0 0 5px; font-size:16px; }
+.movie-card p{ margin:0; opacity:0.6; font-size:13px; }
