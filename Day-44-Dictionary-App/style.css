@@ -1,0 +1,32 @@
+body{
+  margin:0; min-height:100vh; display:flex;
+  justify-content:center; padding:30px;
+  background:#10101a; font-family:sans-serif; color:#fff;
+}
+.container{ width:100%; max-width:600px; }
+.container h1{ text-align:center; }
+.search{
+  display:flex; gap:10px; margin:20px 0;
+}
+.search input{
+  flex:1; padding:12px; border-radius:10px; border:none;
+  outline:none; background:#1e1e2a; color:#fff; font-size:16px;
+}
+.search button{
+  background:#6c5ce7; color:#fff; border:none;
+  padding:12px 20px; border-radius:10px; cursor:pointer;
+  font-weight:600;
+}
+.result{
+  background:#1e1e2a; border-radius:15px; padding:20px;
+}
+.result h2{ margin:0; font-size:28px; }
+.phonetic{ opacity:0.6; margin:5px 0 15px; }
+.meaning{ margin-top:15px; }
+.meaning h4{ margin:10px 0 5px; color:#6c5ce7; }
+.example{ font-style:italic; opacity:0.7; margin-top:5px; }
+.audioBtn{
+  background:#2d2d3a; border:none; color:#fff;
+  padding:6px 12px; border-radius:20px; cursor:pointer;
+  margin-left:10px;
+}
