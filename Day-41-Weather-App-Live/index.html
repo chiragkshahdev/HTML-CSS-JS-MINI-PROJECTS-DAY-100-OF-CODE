@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 41 - Weather App Live</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" spellcheck="false">
+      <button id="searchBtn">🔍</button>
+    </div>
+    
+    <div class="weather" id="weather">
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" id="weatherIcon">
+      <h1 id="temp">--°C</h1>
+      <h2 id="city">Search City</h2>
+      <div class="details">
+        <div class="col">
+          <p>💧</p>
+          <div>
+            <p id="humidity">--%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <p>💨</p>
+          <div>
+            <p id="wind">-- km/h</p>
+            <p>Wind</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="error" id="error"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

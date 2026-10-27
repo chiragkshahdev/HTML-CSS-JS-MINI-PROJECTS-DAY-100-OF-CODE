@@ -1,0 +1,32 @@
+body{
+  margin:0; height:100vh; display:flex;
+  justify-content:center; align-items:center;
+  background:linear-gradient(135deg, #6c5ce7, #a29bfe);
+  font-family:sans-serif;
+}
+.card{
+  width:90%; max-width:400px; background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px); border-radius:20px;
+  padding:30px; text-align:center; color:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+.search{
+  display:flex; gap:10px;
+}
+.search input{
+  flex:1; padding:12px 15px; border:none;
+  border-radius:25px; outline:none; font-size:16px;
+}
+.search button{
+  width:45px; height:45px; border:none;
+  border-radius:50%; cursor:pointer; font-size:18px;
+}
+.weather{ margin-top:20px; }
+.weather h1{ font-size:60px; margin:10px 0 0; }
+.weather h2{ font-weight:400; margin-top:0; }
+.details{
+  display:flex; justify-content:space-between;
+  margin-top:30px; padding:0 20px;
+}
+.col{ display:flex; align-items:center; gap:10px; text-align:left; }
+.error{ color:#ff7675; margin-top:15px; }
