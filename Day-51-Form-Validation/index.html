@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation - Day 51</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Welcome Back</h1>
+      <p>Create your account in 30 seconds</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/2950/2950119.png" alt="signup">
+      <ul>
+        <li><i class="fas fa-check"></i> 100% Secure & Encrypted</li>
+        <li><i class="fas fa-check"></i> No Spam, Ever</li>
+      </ul>
+    </div>
+
+    <form id="form" class="right" novalidate>
+      <h2>Sign Up <span>Day 51</span></h2>
+      
+      <div class="input-group">
+        <label>Full Name</label>
+        <div class="field"><i class="fas fa-user"></i><input type="text" id="name" placeholder="John Doe"><span class="status"></span></div>
+        <small class="error"></small>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <div class="field"><i class="fas fa-envelope"></i><input type="email" id="email" placeholder="john@example.com"><span class="status"></span></div>
+        <small class="error"></small>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <div class="field"><i class="fas fa-lock"></i><input type="password" id="password" placeholder="Min 8 characters"><i class="fas fa-eye toggle" id="toggle"></i><span class="status"></span></div>
+        <small class="error"></small>
+        <div class="strength"><div id="strengthBar"></div></div>
+        <div class="rules" id="rules">
+          <span id="r1"><i class="fas fa-times"></i> 8+ chars</span>
+          <span id="r2"><i class="fas fa-times"></i> Uppercase</span>
+          <span id="r3"><i class="fas fa-times"></i> Number</span>
+          <span id="r4"><i class="fas fa-times"></i> Symbol</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Confirm Password</label>
+        <div class="field"><i class="fas fa-lock"></i><input type="password" id="cpassword" placeholder="Confirm password"><span class="status"></span></div>
+        <small class="error"></small>
+      </div>
+
+      <div class="check">
+        <label><input type="checkbox" id="terms"> I agree to <a href="#">Terms & Privacy</a></label>
+        <small class="error" id="termsError"></small>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>Create Account <i class="fas fa-arrow-right"></i></button>
+      <p class="login">Already have account? <a href="#">Login</a></p>
+    </form>
+  </div>
+
+  <div id="success" class="success-modal hidden">
+    <div class="modal-content"><i class="fas fa-check-circle"></i><h3>Account Created!</h3><p>Welcome aboard</p></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
