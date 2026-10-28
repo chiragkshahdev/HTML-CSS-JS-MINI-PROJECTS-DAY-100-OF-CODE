@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator - Day 50</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <header>
+        <h1>🔲 QR Code Generator</h1>
+        <p>Day 50 - 50% of 100 Days!</p>
+      </header>
+
+      <div class="tabs">
+        <button class="tab active" data-type="text"><i class="fas fa-font"></i> Text</button>
+        <button class="tab" data-type="url"><i class="fas fa-link"></i> URL</button>
+        <button class="tab" data-type="wifi"><i class="fas fa-wifi"></i> WiFi</button>
+        <button class="tab" data-type="email"><i class="fas fa-envelope"></i> Email</button>
+      </div>
+
+      <div class="input-box">
+        <div id="textInput">
+          <textarea id="qrText" placeholder="Enter text to generate QR...">https://github.com</textarea>
+        </div>
+        <div id="wifiInput" class="hidden">
+          <input type="text" id="wifiSSID" placeholder="WiFi Name (SSID)">
+          <input type="password" id="wifiPass" placeholder="Password">
+          <select id="wifiType"><option>WPA</option><option>WEP</option><option>nopass</option></select>
+        </div>
+        <div id="emailInput" class="hidden">
+          <input type="email" id="emailTo" placeholder="Email">
+          <input type="text" id="emailSub" placeholder="Subject">
+          <textarea id="emailBody" placeholder="Message"></textarea>
+        </div>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label>Size: <span id="sizeVal">250</span>px</label>
+          <input type="range" id="size" min="100" max="500" value="250">
+        </div>
+        <div class="colors">
+          <div class="setting"><label>Foreground</label><input type="color" id="fg" value="#000000"></div>
+          <div class="setting"><label>Background</label><input type="color" id="bg" value="#ffffff"></div>
+        </div>
+      </div>
+
+      <button id="generate" class="generate">Generate QR Code</button>
+    </div>
+
+    <div class="right">
+      <div class="qr-card">
+        <div id="qr"></div>
+        <p id="qrData">https://github.com</p>
+      </div>
+      <div class="actions">
+        <button id="download"><i class="fas fa-download"></i> Download PNG</button>
+        <button id="share"><i class="fas fa-share"></i> Share</button>
+        <button id="print"><i class="fas fa-print"></i> Print</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
