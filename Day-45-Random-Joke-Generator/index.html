@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Joke Generator - Day 45</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>😂 Random Joke Generator</h1>
+    <p class="subtitle">Day 45 - 100 Days of Code</p>
+    
+    <div class="category-box">
+      <button class="cat-btn active" data-cat="Any">Any</button>
+      <button class="cat-btn" data-cat="Programming">Programming</button>
+      <button class="cat-btn" data-cat="Pun">Pun</button>
+      <button class="cat-btn" data-cat="Dark">Dark</button>
+    </div>
+
+    <div class="joke-card">
+      <div class="loader hidden"></div>
+      <p id="setup">Click the button to get a joke!</p>
+      <p id="delivery"></p>
+      <span id="category-tag">Any</span>
+    </div>
+
+    <div class="actions">
+      <button id="generateBtn">🎲 Generate Joke</button>
+      <button id="copyBtn">📋 Copy</button>
+      <button id="speakBtn">🔊 Speak</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
