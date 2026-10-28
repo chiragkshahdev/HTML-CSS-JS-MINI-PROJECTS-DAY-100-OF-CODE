@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player - Day 48</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Custom Video Player <span>Day 48</span></h1>
+    
+    <div class="video-wrapper" id="wrapper">
+      <video id="video" poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800">
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+      </video>
+
+      <!-- Custom Controls -->
+      <div class="controls" id="controls">
+        <div class="progress-container" id="progressContainer">
+          <div class="progress" id="progress"></div>
+          <div class="preview" id="preview">0:00</div>
+        </div>
+
+        <div class="controls-bottom">
+          <div class="left">
+            <button id="play"><i class="fas fa-play"></i></button>
+            <button id="rewind"><i class="fas fa-undo"></i> 10</button>
+            <button id="forward">10 <i class="fas fa-redo"></i></button>
+            <div class="volume-box">
+              <button id="mute"><i class="fas fa-volume-up"></i></button>
+              <input type="range" id="volume" min="0" max="100" value="100">
+            </div>
+            <span class="time"><span id="current">0:00</span> / <span id="duration">0:00</span></span>
+          </div>
+          <div class="right">
+            <button id="speed">1x</button>
+            <button id="pip"><i class="fas fa-external-link-alt"></i></button>
+            <button id="fullscreen"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="big-play" id="bigPlay"><i class="fas fa-play"></i></div>
+    </div>
+
+    <div class="playlist">
+      <h3>Playlist</h3>
+      <div class="vid" data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" data-poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217">
+        <img src="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"><span>Big Buck Bunny</span>
+      </div>
+      <div class="vid" data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" data-poster="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=200">
+        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=200"><span>Elephants Dream</span>
+      </div>
+      <div class="vid" data-src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" data-poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=200">
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=200"><span>For Bigger Blazes</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

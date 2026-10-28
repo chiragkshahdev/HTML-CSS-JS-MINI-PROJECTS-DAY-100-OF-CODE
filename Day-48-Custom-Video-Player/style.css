@@ -1,0 +1,45 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+body { background:#0f0f0f; color:white; min-height:100vh; display:flex; justify-content:center; padding:20px; }
+.container { width:100%; max-width:900px; }
+h1 { font-size:1.5rem; margin-bottom:20px; } h1 span { opacity:0.5; font-size:1rem; }
+
+.video-wrapper { position:relative; background:black; border-radius:12px; overflow:hidden; aspect-ratio:16/9; }
+video { width:100%; height:100%; object-fit:cover; }
+
+.controls {
+  position:absolute; bottom:0; left:0; right:0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  padding:10px 15px; transform:translateY(100%); transition:0.3s;
+  opacity:0;
+}
+.video-wrapper:hover .controls, .video-wrapper.paused .controls { transform:translateY(0); opacity:1; }
+
+.progress-container { height:5px; background:rgba(255,255,255,0.3); border-radius:10px; cursor:pointer; position:relative; margin-bottom:12px; }
+.progress { height:100%; background:#ff0000; width:0%; border-radius:10px; position:relative; }
+.progress::after { content:''; position:absolute; right:-6px; top:50%; transform:translateY(-50%); width:12px; height:12px; background:#ff0000; border-radius:50%; }
+.preview { position:absolute; top:-30px; background:black; padding:3px 6px; border-radius:4px; font-size:0.7rem; display:none; }
+
+.controls-bottom { display:flex; justify-content:space-between; align-items:center; }
+.left, .right { display:flex; align-items:center; gap:12px; }
+.controls button { background:none; border:none; color:white; cursor:pointer; font-size:0.95rem; opacity:0.9; }
+.controls button:hover { opacity:1; transform:scale(1.1); }
+.volume-box { display:flex; align-items:center; gap:6px; }
+#volume { width:70px; accent-color:#ff0000; }
+.time { font-size:0.8rem; opacity:0.8; }
+#speed { border:1px solid rgba(255,255,255,0.3); padding:2px 8px; border-radius:4px; font-size:0.75rem; }
+
+.big-play {
+  position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+  width:70px; height:70px; background:rgba(0,0,0,0.7); border-radius:50%;
+  display:flex; justify-content:center; align-items:center; font-size:1.8rem; cursor:pointer;
+  transition:0.3s; opacity:0; pointer-events:none;
+}
+.video-wrapper.paused .big-play { opacity:1; pointer-events:auto; }
+.big-play:hover { background:rgba(255,0,0,0.8); transform:translate(-50%, -50%) scale(1.1); }
+
+.playlist { margin-top:20px; display:flex; gap:10px; overflow-x:auto; }
+.playlist h3 { width:100%; margin-bottom:10px; position:absolute; }
+.playlist { position:relative; padding-top:35px; flex-wrap:wrap; }
+.vid { background:#1e1e1e; padding:8px; border-radius:8px; display:flex; align-items:center; gap:8px; cursor:pointer; min-width:180px; }
+.vid:hover { background:#2a2a2a; } .vid img { width:60px; height:35px; object-fit:cover; border-radius:4px; }
+.vid span { font-size:0.85rem; }
