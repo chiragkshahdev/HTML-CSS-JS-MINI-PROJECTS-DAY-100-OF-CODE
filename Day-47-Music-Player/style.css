@@ -1,0 +1,56 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
+body {
+  min-height:100vh; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display:flex; justify-content:center; align-items:center; padding:20px; color:white;
+}
+.player {
+  background: rgba(255,255,255,0.08); backdrop-filter: blur(20px);
+  border:1px solid rgba(255,255,255,0.1);
+  width:100%; max-width:360px; padding:25px; border-radius:25px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4); text-align:center;
+}
+.header h2 { font-size:1.2rem; } .header p { opacity:0.6; font-size:0.85rem; margin-bottom:20px; }
+
+.cover-box { position:relative; width:220px; height:220px; margin:0 auto 20px; }
+#cover {
+  width:100%; height:100%; border-radius:20px; object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:0.5s;
+}
+.player.playing #cover { transform:scale(1.05); }
+.vinyl {
+  position:absolute; top:10px; right:-15px; width:40px; height:40px;
+  background: radial-gradient(circle, #333 30%, #111 31%);
+  border-radius:50%; opacity:0; transition:0.3s;
+}
+.player.playing .vinyl { opacity:1; animation:spin 3s linear infinite; }
+
+.info { margin-bottom:15px; }
+#title { font-size:1.2rem; } #artist { opacity:0.7; font-size:0.9rem; }
+
+.progress-area { margin:20px 0; }
+.progress-bar { height:5px; background:rgba(255,255,255,0.2); border-radius:10px; cursor:pointer; position:relative; }
+.progress { height:100%; width:0%; background:linear-gradient(90deg, #ff6a00, #ee0979); border-radius:10px; transition:width 0.1s; }
+.timer { display:flex; justify-content:space-between; font-size:0.75rem; opacity:0.6; margin-top:6px; }
+
+.controls { display:flex; justify-content:space-between; align-items:center; margin:20px 0; }
+.controls button { background:none; border:none; color:white; font-size:1.1rem; cursor:pointer; opacity:0.7; transition:0.2s; width:40px; height:40px; border-radius:50%; }
+.controls button:hover { opacity:1; background:rgba(255,255,255,0.1); }
+.controls .play { background:white; color:#302b63; width:55px; height:55px; font-size:1.3rem; opacity:1; }
+.controls .play:hover { transform:scale(1.05); }
+.controls .active { color:#ff6a00; opacity:1; }
+
+.volume { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+.volume input { flex:1; accent-color:#ff6a00; }
+
+.playlist { max-height:150px; overflow-y:auto; text-align:left; }
+.playlist-item {
+  padding:10px; border-radius:10px; cursor:pointer; display:flex; gap:10px;
+  align-items:center; transition:0.2s; margin-bottom:5px;
+}
+.playlist-item:hover { background:rgba(255,255,255,0.1); }
+.playlist-item.active { background:rgba(255,106,0,0.2); border-left:3px solid #ff6a00; }
+.playlist-item img { width:40px; height:40px; border-radius:6px; object-fit:cover; }
+.playlist-item div { flex:1; }
+.playlist-item h4 { font-size:0.85rem; } .playlist-item p { font-size:0.7rem; opacity:0.6; }
+
+@keyframes spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }

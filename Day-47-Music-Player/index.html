@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player - Day 47</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="player">
+    <div class="header">
+      <h2>🎵 Music Player</h2>
+      <p>Day 47</p>
+    </div>
+
+    <div class="cover-box">
+      <img id="cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400" alt="cover">
+      <div class="vinyl"></div>
+    </div>
+
+    <div class="info">
+      <h3 id="title">Blinding Lights</h3>
+      <p id="artist">The Weeknd</p>
+    </div>
+
+    <div class="progress-area">
+      <div class="progress-bar" id="progressBar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="timer">
+        <span id="current">0:00</span>
+        <span id="duration">3:45</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="shuffle"><i class="fas fa-random"></i></button>
+      <button id="prev"><i class="fas fa-backward"></i></button>
+      <button id="play" class="play"><i class="fas fa-play"></i></button>
+      <button id="next"><i class="fas fa-forward"></i></button>
+      <button id="repeat"><i class="fas fa-redo"></i></button>
+    </div>
+
+    <div class="volume">
+      <i class="fas fa-volume-up"></i>
+      <input type="range" id="volume" min="0" max="100" value="80">
+    </div>
+
+    <div class="playlist" id="playlist"></div>
+  </div>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
