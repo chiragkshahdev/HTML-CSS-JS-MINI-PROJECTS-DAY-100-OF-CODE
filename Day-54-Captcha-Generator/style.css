@@ -1,0 +1,75 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+body {
+    background: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 { margin-bottom: 20px; }
+
+.captcha-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.captcha {
+    width: 75%;
+    background: #f0f0f0;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 6px;
+    user-select: none;
+    text-decoration: line-through;
+    font-style: italic;
+    color: #333;
+}
+
+#refreshBtn {
+    width: 50px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: #6c63ff;
+    color: #fff;
+    border-radius: 6px;
+}
+
+#input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#message { height: 20px; margin-bottom: 10px; font-size: 14px; }
+
+#checkBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
