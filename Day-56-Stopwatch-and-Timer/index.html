@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 56 - Stopwatch & Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" data-tab="stopwatch">Stopwatch</button>
+            <button class="tab" data-tab="timer">Timer</button>
+        </div>
+
+        <!-- Stopwatch -->
+        <div class="panel active" id="stopwatch">
+            <h1 id="sw-display">00:00:00:00</h1>
+            <div class="buttons">
+                <button id="sw-start">Start</button>
+                <button id="sw-stop">Stop</button>
+                <button id="sw-reset">Reset</button>
+            </div>
+        </div>
+
+        <!-- Timer -->
+        <div class="panel" id="timer">
+            <div class="inputs">
+                <input type="number" id="min" placeholder="Min" min="0">
+                <input type="number" id="sec" placeholder="Sec" min="0" max="59">
+            </div>
+            <h1 id="tm-display">00:00</h1>
+            <div class="buttons">
+                <button id="tm-start">Start</button>
+                <button id="tm-stop">Stop</button>
+                <button id="tm-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
