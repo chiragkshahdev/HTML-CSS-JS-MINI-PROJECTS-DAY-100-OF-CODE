@@ -1,3 +1,5 @@
+![100 Days Banner](./banner.png)
+
 # 🚀 100 Days Of Code - 100 Mini Projects | HTML CSS JavaScript
 
 > **One Day, One project, One New skill.** Krrish To full E-commerce Till Life.
