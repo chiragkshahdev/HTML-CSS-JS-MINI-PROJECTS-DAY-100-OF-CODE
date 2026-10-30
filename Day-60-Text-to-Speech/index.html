@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 60 - Text to Speech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text to Speech</h1>
+    <p>Day 60 • Web Speech API</p>
+
+    <div class="card">
+      <textarea id="textInput" placeholder="Type something here... e.g., Hello! I am your text to speech converter.">Hello! I am your text to speech converter built on Day 60.</textarea>
+
+      <div class="controls">
+        <div class="control-group">
+          <label>Voice</label>
+          <select id="voiceSelect"></select>
+        </div>
+
+        <div class="control-row">
+          <div class="control-group">
+            <label>Speed: <span id="rateValue">1</span></label>
+            <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+          </div>
+          <div class="control-group">
+            <label>Pitch: <span id="pitchValue">1</span></label>
+            <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Volume: <span id="volumeValue">100%</span></label>
+          <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="speakBtn" class="btn btn-speak">
+          <span id="btnIcon">▶</span> <span id="btnText">Speak</span>
+        </button>
+        <button id="pauseBtn" class="btn btn-pause">Pause</button>
+        <button id="stopBtn" class="btn btn-stop">Stop</button>
+      </div>
+
+      <div class="status" id="status">Ready to speak</div>
+    </div>
+
+    <div class="char-count"><span id="charCount">0</span> characters</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
