@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 59 - Image Editor Filters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image Editor</h1>
+  <p>Day 59 • Filters & Adjustments</p>
+
+  <div class="editor">
+    <div class="canvas-box">
+      <span id="placeholder">Upload an image to start</span>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="controls">
+      <input type="file" id="fileInput" accept="image/*" hidden>
+      
+      <div class="actions">
+        <button class="btn btn-upload" id="uploadBtn">Upload</button>
+        <button class="btn btn-reset" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="filter-grid">
+        <button class="filter-btn" data-filter="grayscale">Grayscale</button>
+        <button class="filter-btn" data-filter="sepia">Sepia</button>
+        <button class="filter-btn" data-filter="invert">Invert</button>
+        <button class="filter-btn" data-filter="blur">Blur</button>
+        <button class="filter-btn" data-filter="vintage">Vintage</button>
+        <button class="filter-btn" data-filter="bw">B&W Pro</button>
+      </div>
+
+      <div class="slider-box">
+        <label>Brightness <span id="v-bright">100%</span></label>
+        <input type="range" id="brightness" min="0" max="200" value="100">
+      </div>
+      <div class="slider-box">
+        <label>Contrast <span id="v-contrast">100%</span></label>
+        <input type="range" id="contrast" min="0" max="200" value="100">
+      </div>
+      <div class="slider-box">
+        <label>Saturate <span id="v-saturate">100%</span></label>
+        <input type="range" id="saturate" min="0" max="200" value="100">
+      </div>
+      <div class="slider-box">
+        <label>Hue <span id="v-hue">0°</span></label>
+        <input type="range" id="hue" min="0" max="360" value="0">
+      </div>
+
+      <button class="btn btn-download" id="downloadBtn">Download Image</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
