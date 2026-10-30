@@ -10,7 +10,7 @@
 
 ---
 
-## 📌 Live Project Links - Day 1 to 10
+## 📌 Live Project Links - Day 1 to 30
 
 | Day | Project | Code |
 |---|---|---|
