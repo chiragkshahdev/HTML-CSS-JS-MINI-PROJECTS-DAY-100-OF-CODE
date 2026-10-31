@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="home box">
+                <div class="logo"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/20181128135827-spotify-logo.png" alt="logo"></div>
+                <ul>
+                    <li><i class="fa-solid fa-house"></i> Home</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i> Search</li>
+                </ul>
+            </div>
+            <div class="library box">
+                <div class="heading">
+                    <i class="fa-solid fa-book"></i> Your Library
+                    <i class="fa-solid fa-plus plus"></i>
+                </div>
+                <div class="lib-cards">
+                    <div class="card1">
+                        <h4>Create your first playlist</h4>
+                        <p>It's easy, we'll help you</p>
+                        <button>Create playlist</button>
+                    </div>
+                    <div class="card1">
+                        <h4>Let's find some podcasts</h4>
+                        <p>We'll keep you updated</p>
+                        <button>Browse podcasts</button>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <span>Legal</span><span>Privacy</span><span>Cookies</span>
+                    <span>About Ads</span><span>Accessibility</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right box">
+            <div class="header">
+                <div class="nav">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="buttons">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log in</button>
+                </div>
+            </div>
+
+            <div class="spotifyPlaylists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardContainer" id="cardContainer">
+                    <!-- JS will inject cards -->
+                </div>
+
+                <h1>Trending Now</h1>
+                <div class="cardContainer">
+                    <div class="card" data-song="Kesariya">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300" alt="">
+                        <h3>Today's Top Hits</h3>
+                        <p>Olivia is on top of the Hottest 50!</p>
+                    </div>
+                    <div class="card" data-song="Calm Down">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300" alt="">
+                        <h3>Chill Hits</h3>
+                        <p>Kick back to the best new and recent chill hits</p>
+                    </div>
+                    <div class="card" data-song="As It Was">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=300" alt="">
+                        <h3>All Out 80s</h3>
+                        <p>The biggest songs of the 1980s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="playbar">
+        <div class="songinfo">Not Playing</div>
+        <div class="songbuttons">
+            <i id="prev" class="fa-solid fa-backward-step"></i>
+            <i id="play" class="fa-solid fa-circle-play"></i>
+            <i id="next" class="fa-solid fa-forward-step"></i>
+        </div>
+        <div class="songtime">00:00 / 00:00</div>
+        <div class="seekbar">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
