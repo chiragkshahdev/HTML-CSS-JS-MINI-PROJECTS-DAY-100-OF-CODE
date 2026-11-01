@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 65 - Instagram Story Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <!-- Stories Bar -->
+    <div class="stories-bar" id="storiesBar"></div>
+
+    <div class="feed-hint">
+      <h2>Instagram Story Viewer</h2>
+      <p>Tap any story to view • Day 65</p>
+    </div>
+
+    <!-- Story Viewer Modal -->
+    <div class="viewer" id="viewer">
+      <div class="viewer-header">
+        <div class="progress-container" id="progressContainer"></div>
+        <div class="viewer-top">
+          <div class="viewer-user">
+            <img id="viewerAvatar" src="" alt="">
+            <span id="viewerName">username</span>
+            <span class="time">2h</span>
+          </div>
+          <button class="close-btn" id="closeBtn">✕</button>
+        </div>
+      </div>
+
+      <div class="viewer-content">
+        <div class="tap-zone left" id="prevZone"></div>
+        <img id="storyImage" class="story-img" src="" alt="">
+        <div class="tap-zone right" id="nextZone"></div>
+        
+        <div class="story-caption" id="storyCaption">Caption here</div>
+      </div>
+
+      <div class="viewer-footer">
+        <input type="text" placeholder="Reply to..." readonly>
+        <button class="send-btn">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
