@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris | Day-81</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🧱 TET<span>RIS</span></div>
+    <div class="nav-right">
+      <button id="soundBtn">🔊 Sound: ON</button>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT PANEL -->
+    <aside class="panel">
+      <h2>🎮 How to Play</h2>
+      <div class="how">
+        <p><b>← →</b> = Move</p>
+        <p><b>↓</b> = Soft Drop</p>
+        <p><b>↑ / X</b> = Rotate</p>
+        <p><b>Space</b> = Hard Drop</p>
+        <p><b>C</b> = Hold Piece</p>
+        <p><b>P</b> = Pause</p>
+      </div>
+
+      <div class="hold-next">
+        <div class="mini-box">
+          <p>HOLD</p>
+          <canvas id="holdCanvas" width="80" height="80"></canvas>
+          <small>Press C</small>
+        </div>
+        <div class="mini-box">
+          <p>NEXT</p>
+          <canvas id="nextCanvas" width="80" height="80"></canvas>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>⭐ Score</span><b id="score">0</b></div>
+        <div class="stat"><span>🏆 Best</span><b id="best">0</b></div>
+        <div class="stat"><span>🧱 Lines</span><b id="lines">0</b></div>
+        <div class="stat"><span>🎯 Level</span><b id="level">1</b></div>
+      </div>
+
+      <div class="leader">
+        <h3>🏆 Top Scores</h3>
+        <ol id="topList"></ol>
+      </div>
+
+      <button class="start-btn" id="startBtn">▶️ Start Game</button>
+      <button class="pause-btn" id="pauseBtn">⏸️ Pause</button>
+      <button class="reset-btn" id="resetBtn">🔄 Reset</button>
+    </aside>
+
+    <!-- GAME AREA -->
+    <section class="game-area">
+      <div class="game-head">
+        <div>Score: <b id="scoreTop">0</b></div>
+        <div id="statusBadge" class="badge">Press Start</div>
+        <div>Level: <b id="levelTop">1</b> | Lines: <b id="linesTop">0</b></div>
+      </div>
+
+      <div class="board-wrap">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-icon">🧱</div>
+          <h2 id="overlayTitle">TETRIS</h2>
+          <p id="overlayText">Clear lines, don't stack to top!</p>
+          <div class="overlay-score hidden" id="overlayScore">
+            <p>Score: <b id="finalScore">0</b></p>
+            <p>Lines: <b id="finalLines">0</b> | Level: <b id="finalLevel">1</b></p>
+            <p>Best: <b id="finalBest">0</b></p>
+          </div>
+          <button id="overlayBtn">▶️ Start</button>
+        </div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <button id="leftBtn">⬅️</button>
+        <button id="rotateBtn">🔄</button>
+        <button id="rightBtn">➡️</button>
+        <button id="downBtn">⬇️</button>
+        <button id="dropBtn">⬇️⬇️ DROP</button>
+        <button id="holdBtn">📦 HOLD</button>
+      </div>
+
+      <p class="tips">💡 Tip: T-Spin mat socho, pehle flat stacking seekho. I-piece ko side me vertical rakho Tetris (4 lines) ke liye!</p>
+    </section>
+  </main>
+
+  <div id="toast">Game Started!</div>
+  <script src="script.js"></script>
+</body>
+</html>
