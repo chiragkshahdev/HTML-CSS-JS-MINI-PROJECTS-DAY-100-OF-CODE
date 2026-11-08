@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brick Breaker | Day-76</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🧱 Brick<span>Breaker</span></div>
+    <div class="nav-right">
+      <button id="soundBtn">🔊 Sound: ON</button>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT PANEL -->
+    <aside class="panel">
+      <h2>🎮 How to Play</h2>
+      <div class="how">
+        <p><b>🖱️ Mouse</b> = Move Paddle</p>
+        <p><b>← → / A D</b> = Move Paddle</p>
+        <p><b>Space</b> = Launch Ball / Pause</p>
+        <p><b>Enter</b> = Restart</p>
+      </div>
+
+      <div class="difficulty">
+        <p><b>Difficulty</b></p>
+        <div class="birds">
+          <button class="diff active" data-diff="easy">🐢 Easy</button>
+          <button class="diff" data-diff="medium">⚡ Medium</button>
+          <button class="diff" data-diff="hard">🔥 Hard</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>⭐ Score</span><b id="score">0</b></div>
+        <div class="stat"><span>🏆 Best</span><b id="best">0</b></div>
+        <div class="stat"><span>❤️ Lives</span><b id="lives">3</b></div>
+        <div class="stat"><span>🎯 Level</span><b id="level">1</b></div>
+      </div>
+
+      <div class="power-box">
+        <h3>⚡ Active Power-up</h3>
+        <p id="activePower">None</p>
+        <div class="power-legend">
+          <p>🔵 <b>Wide</b> - Paddle bada</p>
+          <p>🔴 <b>Multi</b> - 3 Balls</p>
+          <p>🟢 <b>Slow</b> - Ball slow</p>
+          <p>⭐ <b>Life</b> - +1 Life</p>
+        </div>
+      </div>
+
+      <div class="leader">
+        <h3>🏆 Top Scores</h3>
+        <ol id="topList"></ol>
+      </div>
+
+      <button class="start-btn" id="startBtn">▶️ Start Game</button>
+      <button class="pause-btn" id="pauseBtn">⏸️ Pause</button>
+      <button class="reset-btn" id="resetBtn">🔄 Reset</button>
+    </aside>
+
+    <!-- GAME AREA -->
+    <section class="game-area">
+      <div class="game-head">
+        <div>Score: <b id="scoreTop">0</b> | Bricks: <b id="bricksLeft">0</b></div>
+        <div id="statusBadge" class="badge">Press Start</div>
+        <div>Level: <b id="levelTop">1</b> | ❤️ <b id="livesTop">3</b></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="480" height="560"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="overlay-icon">🧱</div>
+          <h2 id="overlayTitle">Brick Breaker</h2>
+          <p id="overlayText">Move paddle, break all bricks!</p>
+          <div class="overlay-score hidden" id="overlayScore">
+            <p>Score: <b id="finalScore">0</b></p>
+            <p>Best: <b id="finalBest">0</b></p>
+            <p>Level Reached: <b id="finalLevel">1</b></p>
+          </div>
+          <button id="overlayBtn">▶️ Start</button>
+        </div>
+
+        <div class="tap-hint hidden" id="tapHint">👆 Move Paddle • Space to Launch</div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <button id="leftBtn">⬅️ Left</button>
+        <button id="launchBtn">🚀 LAUNCH</button>
+        <button id="rightBtn">➡️ Right</button>
+      </div>
+
+      <p class="tips">💡 Tip: Ball ko paddle ke edge se maro - angle change hoga. Power-up bricks (✨) ko mat chhodo!</p>
+    </section>
+  </main>
+
+  <div id="toast">Game Started!</div>
+  <script src="script.js"></script>
+</body>
+</html>
