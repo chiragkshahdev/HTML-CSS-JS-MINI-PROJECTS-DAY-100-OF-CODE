@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whiteboard | Day-84</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🎨 White<span>board</span></div>
+    <div class="nav-right">
+      <span id="userCount">👥 1 Online</span>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div class="tool-group">
+      <button class="tool active" data-tool="pen" title="Pen (P)">✏️ Pen</button>
+      <button class="tool" data-tool="marker" title="Marker">🖊️ Marker</button>
+      <button class="tool" data-tool="eraser" title="Eraser (E)">🧽 Eraser</button>
+      <button class="tool" data-tool="line" title="Line">📏 Line</button>
+      <button class="tool" data-tool="rect" title="Rectangle">⬜ Rect</button>
+      <button class="tool" data-tool="circle" title="Circle">⭕ Circle</button>
+      <button class="tool" data-tool="arrow" title="Arrow">➡️ Arrow</button>
+      <button class="tool" data-tool="text" title="Text (T)">🔤 Text</button>
+      <button class="tool" data-tool="fill" title="Fill Background">🪣 Fill</button>
+    </div>
+
+    <div class="tool-group">
+      <div class="colors" id="colors">
+        <button class="color active" data-color="#000000" style="background:#000"></button>
+        <button class="color" data-color="#ef4444" style="background:#ef4444"></button>
+        <button class="color" data-color="#f97316" style="background:#f97316"></button>
+        <button class="color" data-color="#facc15" style="background:#facc15"></button>
+        <button class="color" data-color="#22c55e" style="background:#22c55e"></button>
+        <button class="color" data-color="#3b82f6" style="background:#3b82f6"></button>
+        <button class="color" data-color="#a855f7" style="background:#a855f7"></button>
+        <button class="color" data-color="#ec4899" style="background:#ec4899"></button>
+        <button class="color" data-color="#ffffff" style="background:#fff;border:1px solid #ddd"></button>
+        <input type="color" id="customColor" value="#000000" title="Custom Color" />
+      </div>
+    </div>
+
+    <div class="tool-group">
+      <label>Size: <b id="sizeVal">5px</b></label>
+      <input type="range" id="sizeRange" min="1" max="50" value="5" />
+      <div class="size-preview"><div id="sizeDot"></div></div>
+    </div>
+
+    <div class="tool-group">
+      <button id="undoBtn" title="Undo (Ctrl+Z)">↩️ Undo</button>
+      <button id="redoBtn" title="Redo (Ctrl+Y)">↪️ Redo</button>
+      <button id="clearBtn">🗑️ Clear</button>
+    </div>
+  </div>
+
+  <main class="layout">
+    <!-- LEFT: Background / Templates -->
+    <aside class="panel">
+      <h3>🖼️ Background</h3>
+      <div class="bg-options">
+        <button class="bg-opt active" data-bg="#ffffff">⬜ White</button>
+        <button class="bg-opt" data-bg="#fef9c3">🟨 Yellow</button>
+        <button class="bg-opt" data-bg="#0f172a">⬛ Blackboard</button>
+        <button class="bg-opt" data-bg="grid">📐 Grid</button>
+        <button class="bg-opt" data-bg="dots">⚫ Dots</button>
+        <button class="bg-opt" data-bg="lines">📏 Lines</button>
+      </div>
+
+      <h3 style="margin-top:16px">📝 Sticky Notes</h3>
+      <div class="sticky-colors">
+        <button class="sticky-add" data-color="#fef08a">+ Yellow</button>
+        <button class="sticky-add" data-color="#fda4af">+ Pink</button>
+        <button class="sticky-add" data-color="#86efac">+ Green</button>
+        <button class="sticky-add" data-color="#93c5fd">+ Blue</button>
+      </div>
+      <div id="stickyList"></div>
+
+      <h3 style="margin-top:16px">💾 Save / Load</h3>
+      <button class="save-btn" id="savePngBtn">📸 Download PNG</button>
+      <button class="save-btn" id="saveJsonBtn">💾 Save Project</button>
+      <button class="save-btn" id="loadBtn">📂 Load Project</button>
+      <input type="file" id="fileInput" accept=".json" class="hidden" />
+      <button class="save-btn" id="copyBtn">🔗 Copy Image</button>
+
+      <div class="stats">
+        <p>Strokes: <b id="strokeCount">0</b></p>
+        <p>Undo Stack: <b id="undoCount">0</b></p>
+      </div>
+    </aside>
+
+    <!-- CANVAS AREA -->
+    <section class="canvas-area">
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="whiteboard" width="1000" height="600"></canvas>
+        <div class="canvas-hint" id="canvasHint">✏️ Click & Drag to Draw • Double-click for Text</div>
+        <input type="text" id="textInput" class="hidden" placeholder="Type & Enter..." />
+      </div>
+
+      <div class="canvas-actions">
+        <button id="zoomOutBtn">➖ Zoom Out</button>
+        <span>Zoom: <b id="zoomVal">100%</b></span>
+        <button id="zoomInBtn">➕ Zoom In</button>
+        <button id="fitBtn">📐 Fit</button>
+        <label><input type="checkbox" id="gridCheck" /> Show Grid</label>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast">Ready to Draw!</div>
+  <script src="script.js"></script>
+</body>
+</html>
