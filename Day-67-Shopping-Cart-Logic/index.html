@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | ShopKart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">ShopKart<span>.</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#" class="active">Cart</a>
+    </nav>
+    <div class="nav-right">
+      <button class="cart-btn">🛒 Cart <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Shopping Cart <span id="itemCountText"></span></h1>
+    <p class="sub">Free delivery on orders above ₹999</p>
+
+    <!-- Progress Bar for Free Delivery -->
+    <div class="progress-box">
+      <p id="freeShipMsg"></p>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+    </div>
+
+    <div class="cart-layout">
+      <!-- Left: Items -->
+      <section class="items-section">
+        <div class="cart-actions-top">
+          <button id="clearCart" class="link-btn danger">Clear All</button>
+          <button id="addSample" class="link-btn">+ Add Sample Products</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div id="emptyState" class="empty hidden">
+          <div class="empty-icon">🛒</div>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added anything yet.</p>
+          <button class="shop-btn" onclick="addSampleProducts()">Continue Shopping →</button>
+        </div>
+      </section>
+
+      <!-- Right: Summary -->
+      <aside class="summary">
+        <h3>Price Details</h3>
+
+        <div class="coupon-box">
+          <input type="text" id="couponInput" placeholder="Enter Coupon Code" />
+          <button id="applyCoupon">Apply</button>
+        </div>
+        <p class="coupon-hint">Try: <b>SHOP10</b> (10% off) • <b>WELCOME20</b> (20% off)</p>
+        <p id="couponMsg"></p>
+
+        <div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+        <div class="row"><span>Discount</span><b id="discount" class="green">- ₹0</b></div>
+        <div class="row"><span>Delivery</span><b id="delivery">₹0</b></div>
+        <div class="row"><span>Platform Fee</span><b>₹9</b></div>
+        <hr />
+        <div class="row total"><span>Total Amount</span><b id="grandTotal">₹0</b></div>
+        <p class="save-msg" id="saveMsg"></p>
+
+        <button class="checkout" id="checkoutBtn">Proceed to Checkout →</button>
+        <button class="continue" onclick="alert('Back to Shop!')">← Continue Shopping</button>
+
+        <div class="trust">
+          <p>🔒 100% Secure Payments</p>
+          <p>↩️ 7 Days Easy Return</p>
+          <p>💳 COD / UPI / Card Accepted</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="toast">Item updated!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
