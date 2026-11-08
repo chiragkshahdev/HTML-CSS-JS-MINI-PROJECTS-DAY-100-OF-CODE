@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatApp | Day-69</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+    <!-- LEFT: Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <div class="me"><span class="avatar me-avatar">😎</span><b>You</b><small>Online</small></div>
+        <div class="head-icons">
+          <button id="darkBtn" title="Dark Mode">🌙</button>
+          <button id="newChatBtn" title="New Chat">💬+</button>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search or start new chat" />
+      </div>
+
+      <div class="filter-tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="unread">Unread</button>
+        <button class="tab" data-filter="groups">Groups</button>
+      </div>
+
+      <div class="chat-list" id="chatList"></div>
+
+      <div class="sidebar-footer">
+        <p>💬 <b id="totalChats">0</b> Chats • <span id="totalUnread">0</span> Unread</p>
+      </div>
+    </aside>
+
+    <!-- RIGHT: Chat Window -->
+    <main class="chat-window" id="chatWindow">
+      <!-- Empty State -->
+      <div class="empty-chat" id="emptyChat">
+        <div class="empty-icon">💬</div>
+        <h2>ChatApp Web</h2>
+        <p>Now send and receive messages without keeping your phone connected.</p>
+        <p class="hint">Select a chat from left to start messaging →</p>
+      </div>
+
+      <!-- Active Chat -->
+      <div class="active-chat hidden" id="activeChat">
+        <header class="chat-head">
+          <button id="backBtn" class="back">←</button>
+          <span class="avatar" id="chatAvatar">🌸</span>
+          <div class="chat-user">
+            <b id="chatName">Priya</b>
+            <small id="chatStatus">online</small>
+          </div>
+          <div class="chat-head-icons">
+            <button>📹</button>
+            <button>📞</button>
+            <button id="clearChatBtn">🗑️</button>
+            <button id="infoBtn">ℹ️</button>
+          </div>
+        </header>
+
+        <div class="messages" id="messages"></div>
+
+        <div class="typing-indicator hidden" id="typing"> <span></span><span></span><span></span> <small>typing...</small></div>
+
+        <div class="emoji-bar hidden" id="emojiBar">
+          <button>😀</button><button>😂</button><button>❤️</button><button>🔥</button><button>👍</button><button>🙏</button><button>😍</button><button>🎉</button><button>😢</button><button>😎</button>
+        </div>
+
+        <footer class="input-bar">
+          <button id="emojiBtn">😀</button>
+          <button>📎</button>
+          <input type="text" id="msgInput" placeholder="Type a message" autocomplete="off" />
+          <button id="sendBtn">➤</button>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast">Message sent!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
