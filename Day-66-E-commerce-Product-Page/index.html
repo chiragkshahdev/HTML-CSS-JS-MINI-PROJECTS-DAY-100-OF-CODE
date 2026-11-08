@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Wireless Headphones | ShopKart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">ShopKart<span>.</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" class="active">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Deals</a>
+    </nav>
+    <div class="nav-right">
+      <span>🔍</span>
+      <span>❤️</span>
+      <button class="cart-btn" id="cartBtn">🛒 Cart <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main class="product-container">
+    <!-- Left: Gallery -->
+    <section class="gallery">
+      <div class="main-image">
+        <span class="badge">-30% OFF</span>
+        <img id="mainImg" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" alt="Headphones" />
+      </div>
+      <div class="thumbs">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&q=80" class="thumb active" alt="thumb 1" />
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=200&q=80" class="thumb" alt="thumb 2" />
+        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=200&q=80" class="thumb" alt="thumb 3" />
+        <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=200&q=80" class="thumb" alt="thumb 4" />
+      </div>
+    </section>
+
+    <!-- Right: Details -->
+    <section class="details">
+      <p class="breadcrumb">Home / Audio / Headphones</p>
+      <h1>Aura Pro Wireless Headphones</h1>
+      <div class="rating">
+        <span>⭐⭐⭐⭐⭐</span> <b>4.8</b> <a href="#">(2,340 reviews)</a> <span class="stock">• In Stock</span>
+      </div>
+
+      <div class="price-box">
+        <h2 id="price">₹2,499</h2>
+        <del>₹3,599</del>
+        <span class="save">You Save ₹1,100</span>
+      </div>
+      <p class="tax">Inclusive of all taxes • Free Delivery</p>
+
+      <p class="desc">Experience studio-quality sound with 40mm drivers, Active Noise Cancellation, 60-hour battery life and ultra-soft memory foam cushions for all-day comfort.</p>
+
+      <div class="option-group">
+        <p><b>Color:</b> <span id="colorName">Midnight Black</span></p>
+        <div class="colors">
+          <button class="color active" data-color="Midnight Black" style="background:#111"></button>
+          <button class="color" data-color="Ocean Blue" style="background:#2563eb"></button>
+          <button class="color" data-color="Cream White" style="background:#e5e7eb"></button>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <p><b>Quantity:</b></p>
+        <div class="qty">
+          <button id="minus">-</button>
+          <span id="qtyValue">1</span>
+          <button id="plus">+</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="add-cart" id="addCart">Add to Cart</button>
+        <button class="buy-now" id="buyNow">Buy Now</button>
+        <button class="wishlist" id="wishBtn">♡</button>
+      </div>
+
+      <ul class="features">
+        <li>✅ 60 Hours Battery Life</li>
+        <li>✅ Active Noise Cancellation</li>
+        <li>✅ Bluetooth 5.3 + AUX</li>
+        <li>✅ 1 Year Warranty</li>
+      </ul>
+
+      <div class="delivery">
+        <p>📦 <b>Free Delivery</b> - Get it by Tomorrow</p>
+        <p>↩️ <b>7 Days</b> Easy Return & Replacement</p>
+        <p>💳 <b>COD / UPI / Card</b> Available</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast">Added to cart!</div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h3>Your Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="drawer-footer">
+      <p>Total: <b id="cartTotal">₹0</b></p>
+      <button class="checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
