@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game | Day-74</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🐍 Snake<span>Game</span></div>
+    <div class="nav-right">
+      <button id="soundBtn">🔊 Sound: ON</button>
+      <button id="darkBtn">🌙</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: Controls -->
+    <aside class="panel">
+      <h2>🎮 Controls</h2>
+      <p class="hint">Keyboard: <b>↑ ↓ ← →</b> or <b>W A S D</b><br>Space: Pause / Resume<br>Enter: Restart</p>
+
+      <div class="difficulty">
+        <p><b>Speed / Difficulty</b></p>
+        <div class="diff-btns">
+          <button class="diff active" data-speed="150">🐢 Easy</button>
+          <button class="diff" data-speed="110">⚡ Medium</button>
+          <button class="diff" data-speed="70">🔥 Hard</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>🍎 Score</span><b id="score">0</b></div>
+        <div class="stat"><span>🏆 Best</span><b id="best">0</b></div>
+        <div class="stat"><span>📏 Length</span><b id="length">3</b></div>
+        <div class="stat"><span>⏱️ Time</span><b id="timer">0s</b></div>
+      </div>
+
+      <div class="top-scores">
+        <h3>🏆 Top Scores</h3>
+        <ol id="topList"></ol>
+      </div>
+
+      <button class="start-btn" id="startBtn">▶️ Start Game</button>
+      <button class="pause-btn" id="pauseBtn">⏸️ Pause</button>
+      <button class="reset-btn" id="resetBtn">🔄 Reset</button>
+    </aside>
+
+    <!-- CENTER: Game -->
+    <section class="game-area">
+      <div class="game-head">
+        <div>Score: <b id="scoreTop">0</b></div>
+        <div id="statusBadge" class="badge">Press Start</div>
+        <div>Best: <b id="bestTop">0</b></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay">
+          <div class="overlay-icon">🐍</div>
+          <h2 id="overlayTitle">Snake Game</h2>
+          <p id="overlayText">Press Start or Space to play</p>
+          <button id="overlayBtn">▶️ Start</button>
+        </div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <div></div><button data-dir="up">⬆️</button><div></div>
+        <button data-dir="left">⬅️</button><button data-dir="down">⬇️</button><button data-dir="right">➡️</button>
+      </div>
+
+      <div class="game-tips">
+        <p>🍎 Red Apple = +10 Points &nbsp;|&nbsp; 🌟 Golden Apple = +50 Points (Rare!) &nbsp;|&nbsp; 🧱 Wall / Self = Game Over</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast">Game Started!</div>
+  <script src="script.js"></script>
+</body>
+</html>

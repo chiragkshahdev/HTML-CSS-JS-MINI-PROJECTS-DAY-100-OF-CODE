@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; }
+button { cursor: pointer; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 4%; background: #1e293b; position: sticky; top: 0; z-index: 10; }
+.logo { font-size: 22px; font-weight: 800; }
+.logo span { color: #22c55e; }
+.nav-right { display: flex; gap: 8px; }
+.nav-right button { padding: 8px 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-weight: 600; }
+
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; max-width: 1100px; margin: 20px auto; padding: 0 16px; align-items: start; }
+.panel { background: #1e293b; padding: 18px; border-radius: 14px; }
+.panel h2 { font-size: 18px; margin-bottom: 8px; }
+.hint { font-size: 13px; color: #94a3b8; line-height: 1.6; background: #0f172a; padding: 10px; border-radius: 8px; }
+.difficulty { margin: 16px 0; }
+.diff-btns { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.diff { padding: 8px 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 13px; font-weight: 600; }
+.diff.active { background: #22c55e; color: #111; border-color: #22c55e; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+.stat { background: #0f172a; padding: 12px; border-radius: 10px; text-align: center; }
+.stat span { display: block; font-size: 12px; color: #94a3b8; }
+.stat b { font-size: 22px; }
+.top-scores { background: #0f172a; padding: 12px; border-radius: 10px; margin: 12px 0; }
+.top-scores h3 { font-size: 14px; margin-bottom: 8px; }
+.top-scores ol { padding-left: 18px; font-size: 14px; line-height: 1.8; color: #cbd5e1; }
+.start-btn { width: 100%; background: #22c55e; color: #111; border: none; padding: 13px; border-radius: 10px; font-weight: 800; font-size: 15px; margin-top: 6px; }
+.pause-btn { width: 100%; background: #f59e0b; color: #111; border: none; padding: 11px; border-radius: 10px; font-weight: 700; margin-top: 8px; }
+.reset-btn { width: 100%; background: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 700; margin-top: 8px; }
+
+.game-area { background: #1e293b; padding: 16px; border-radius: 14px; }
+.game-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 15px; }
+.badge { background: #22c55e; color: #111; padding: 5px 12px; border-radius: 20px; font-weight: 700; font-size: 13px; }
+.badge.paused { background: #f59e0b; }
+.badge.over { background: #ef4444; color: #fff; }
+
+.canvas-wrap { position: relative; width: 100%; max-width: 500px; margin: 0 auto; background: #020617; border-radius: 12px; overflow: hidden; border: 3px solid #334155; }
+canvas { width: 100%; display: block; aspect-ratio: 1; }
+.overlay { position: absolute; inset: 0; background: rgba(0,0,0,.75); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 20px; }
+.overlay-icon { font-size: 60px; }
+.overlay h2 { font-size: 28px; }
+.overlay p { color: #cbd5e1; }
+.overlay button { background: #22c55e; border: none; padding: 12px 24px; border-radius: 10px; font-weight: 800; font-size: 16px; margin-top: 6px; }
+.overlay.hidden { display: none; }
+
+.mobile-controls { display: none; grid-template-columns: repeat(3, 60px); gap: 6px; justify-content: center; margin: 16px 0 6px; }
+.mobile-controls button { width: 60px; height: 50px; border-radius: 10px; border: none; background: #334155; font-size: 20px; }
+.game-tips { text-align: center; color: #94a3b8; font-size: 12px; margin-top: 12px; line-height: 1.6; }
+
+#toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(80px); background: #fff; color: #111; padding: 12px 20px; border-radius: 30px; transition: .3s; z-index: 50; font-weight: 700; }
+#toast.show { transform: translateX(-50%) translateY(0); }
+
+body.light { background: #f1f5f9; color: #111; }
+body.light .navbar, body.light .panel, body.light .game-area { background: #fff; color: #111; }
+body.light .hint, body.light .stat, body.light .top-scores, body.light .diff { background: #f1f5f9; color: #111; border-color: #e2e8f0; }
+body.light .nav-right button { background: #fff; color: #111; }
+
+@media (max-width: 850px) {
+  .layout { grid-template-columns: 1fr; }
+  .mobile-controls { display: grid; }
+  .panel { order: 2; }
+}
