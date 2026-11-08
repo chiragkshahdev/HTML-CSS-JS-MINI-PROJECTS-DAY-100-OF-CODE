@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maze Solver Visualizer | Day-83</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🧩 Maze<span>Solver</span></div>
+    <div class="nav-right">
+      <button id="soundBtn">🔊 Sound: ON</button>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT PANEL -->
+    <aside class="panel">
+      <h2>🎮 Controls</h2>
+
+      <div class="setting-group">
+        <p><b>Algorithm</b></p>
+        <div class="options">
+          <button class="algo active" data-algo="bfs">🌊 BFS</button>
+          <button class="algo" data-algo="dfs">🌀 DFS</button>
+          <button class="algo" data-algo="astar">⭐ A*</button>
+          <button class="algo" data-algo="dijkstra">📐 Dijkstra</button>
+        </div>
+        <p class="algo-desc" id="algoDesc">BFS: Shortest path, level-by-level explores</p>
+      </div>
+
+      <div class="setting-group">
+        <p><b>Maze Size</b></p>
+        <div class="options">
+          <button class="size" data-size="15">Small 15x15</button>
+          <button class="size active" data-size="21">Medium 21x21</button>
+          <button class="size" data-size="31">Large 31x31</button>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <p><b>Speed: <span id="speedVal">Fast</span></b></p>
+        <input type="range" id="speedRange" min="1" max="100" value="80" />
+      </div>
+
+      <div class="setting-group">
+        <p><b>Draw Mode</b></p>
+        <div class="options">
+          <button class="draw-mode active" data-mode="wall">🧱 Wall</button>
+          <button class="draw-mode" data-mode="erase">🧽 Erase</button>
+          <button class="draw-mode" data-mode="start">🟢 Start</button>
+          <button class="draw-mode" data-mode="end">🔴 End</button>
+        </div>
+        <p style="font-size:12px;color:#888;margin-top:6px">Maze pe drag karke wall banao / erase karo</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>👀 Visited</span><b id="visited">0</b></div>
+        <div class="stat"><span>📏 Path Length</span><b id="pathLen">0</b></div>
+        <div class="stat"><span>⏱️ Time</span><b id="timeTaken">0ms</b></div>
+        <div class="stat"><span>🎯 Status</span><b id="status">Ready</b></div>
+      </div>
+
+      <div class="legend">
+        <p><span class="dot green"></span> Start</p>
+        <p><span class="dot red"></span> End</p>
+        <p><span class="dot blue"></span> Visited</p>
+        <p><span class="dot yellow"></span> Final Path</p>
+        <p><span class="dot black"></span> Wall</p>
+      </div>
+
+      <button class="start-btn" id="solveBtn">▶️ Solve Maze</button>
+      <button class="pause-btn" id="generateBtn">🎲 Generate New Maze</button>
+      <button class="pause-btn" id="clearPathBtn" style="background:#3b82f6;color:#fff">🧹 Clear Path</button>
+      <button class="reset-btn" id="clearWallBtn">Clear Walls</button>
+    </aside>
+
+    <!-- MAZE AREA -->
+    <section class="maze-area">
+      <div class="maze-head">
+        <div>Algorithm: <b id="algoTop">BFS</b></div>
+        <div id="statusBadge" class="badge">Ready to Solve</div>
+        <div>Size: <b id="sizeTop">21x21</b></div>
+      </div>
+
+      <div class="maze-wrap">
+        <div class="maze-grid" id="mazeGrid"></div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-icon">🧩</div>
+          <h2>Maze Solver</h2>
+          <p>Generate maze, pick algorithm, hit Solve!</p>
+          <button id="overlayBtn">🎲 Generate Maze</button>
+        </div>
+      </div>
+
+      <div class="comparison">
+        <h3>⚡ Algorithm Comparison</h3>
+        <table>
+          <tr><th>Algorithm</th><th>Shortest?</th><th>Speed</th><th>Best For</th></tr>
+          <tr><td>🌊 BFS</td><td>✅ Yes</td><td>Medium</td><td>Unweighted shortest path</td></tr>
+          <tr><td>🌀 DFS</td><td>❌ No</td><td>Fast</td><td>Quick, maze exploration</td></tr>
+          <tr><td>⭐ A*</td><td>✅ Yes</td><td>Fastest</td><td>Best overall, uses heuristic</td></tr>
+          <tr><td>📐 Dijkstra</td><td>✅ Yes</td><td>Slow</td><td>Weighted graphs</td></tr>
+        </table>
+      </div>
+
+      <p class="tips">💡 Tip: A* sabse fast hai kyunki wo target ki taraf guess karta hai (heuristic). BFS sab explore karta hai. DFS deep jata hai - kabhi kabhi lamba path deta hai.</p>
+    </section>
+  </main>
+
+  <div id="toast">Maze Generated!</div>
+  <script src="script.js"></script>
+</body>
+</html>
