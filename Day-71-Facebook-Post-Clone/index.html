@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Clone | Day-71</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="nav-left"><div class="fb-logo">f</div><input type="text" id="topSearch" placeholder="🔍 Search Facebook" /></div>
+    <div class="nav-center"><button class="active">🏠</button><button>👥</button><button>📺</button><button>🏪</button><button>🎮</button></div>
+    <div class="nav-right"><button>➕</button><button>💬<span class="notif">3</span></button><button>🔔<span class="notif">5</span></button><span class="avatar">😎</span></div>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT SIDEBAR -->
+    <aside class="left">
+      <div class="menu-item"><span class="avatar">😎</span><b>You Dev</b></div>
+      <div class="menu-item"><span>👥</span> Friends</div>
+      <div class="menu-item"><span>🕒</span> Memories</div>
+      <div class="menu-item"><span>🔖</span> Saved</div>
+      <div class="menu-item"><span>👥</span> Groups</div>
+      <div class="menu-item"><span>📺</span> Video</div>
+      <div class="menu-item"><span>🏪</span> Marketplace</div>
+      <div class="menu-item"><span>📅</span> Events</div>
+      <div class="shortcut"><b>Your Shortcuts</b><p>💻 100 Days of Code</p><p>🍕 Foodie Virar</p><p>🏏 Cricket Fans</p></div>
+    </aside>
+
+    <!-- FEED -->
+    <main class="feed">
+      <!-- Stories -->
+      <div class="stories">
+        <div class="story create"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" /><div class="plus">+</div><p>Create story</p></div>
+        <div class="story"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" /><span class="story-avatar">🌸</span><p>Priya</p></div>
+        <div class="story"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" /><span class="story-avatar">🔥</span><p>Rahul</p></div>
+        <div class="story"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" /><span class="story-avatar">✈️</span><p>Sneha</p></div>
+        <div class="story"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" /><span class="story-avatar">🎮</span><p>Aman</p></div>
+      </div>
+
+      <!-- Create Post -->
+      <div class="create-post">
+        <div class="create-top"><span class="avatar">😎</span><input type="text" id="newPostInput" placeholder="What's on your mind, You?" /></div>
+        <div class="create-actions">
+          <button onclick="createPost('📹 Live video')">📹 Live video</button>
+          <button onclick="createPost('🖼️ Photo/video')">🖼️ Photo/video</button>
+          <button onclick="createPost('😊 Feeling/activity')">😊 Feeling/activity</button>
+        </div>
+        <button class="post-btn" id="publishBtn">Post</button>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-bar">
+        <button class="filter active" data-filter="all">All Posts</button>
+        <button class="filter" data-filter="liked">Liked</button>
+        <button class="filter" data-filter="saved">Saved</button>
+      </div>
+
+      <!-- Posts Container -->
+      <div id="postsContainer"></div>
+
+      <div class="end">You've seen all posts 🎉</div>
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right">
+      <h3>Sponsored</h3>
+      <div class="sponsored"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&q=80" /><p><b>Aura Headphones</b><br><small>50% OFF Today</small></p></div>
+      <div class="sponsored"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=100&q=80" /><p><b>Pizza Hut Virar</b><br><small>Buy 1 Get 1 Free</small></p></div>
+      <hr />
+      <h3>Contacts</h3>
+      <div id="contactsList"></div>
+      <hr />
+      <div class="stats-box">
+        <p>👍 Total Likes: <b id="totalLikes">0</b></p>
+        <p>💬 Comments: <b id="totalComments">0</b></p>
+        <p>↗️ Shares: <b id="totalShares">0</b></p>
+        <button id="resetBtn">Reset Feed</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Share Modal -->
+  <div class="modal hidden" id="shareModal">
+    <div class="modal-box">
+      <h3>Share Post</h3>
+      <p id="shareText"></p>
+      <div class="modal-btns"><button onclick="closeShare()">Cancel</button><button class="confirm" onclick="confirmShare()">Share Now</button></div>
+    </div>
+  </div>
+
+  <div id="toast">Liked 👍</div>
+  <script src="script.js"></script>
+</body>
+</html>
