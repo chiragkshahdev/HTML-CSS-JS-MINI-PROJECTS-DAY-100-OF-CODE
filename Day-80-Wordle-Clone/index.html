@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordle Clone | Day-80</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <button id="helpBtn" title="How to play">❓</button>
+    <div class="logo">WORDLE<span> Clone</span></div>
+    <div class="nav-right">
+      <button id="hintBtn" title="Get Hint">💡 Hint</button>
+      <button id="soundBtn">🔊</button>
+      <button id="themeBtn">🌙</button>
+      <button id="statsBtn">📊</button>
+    </div>
+  </header>
+
+  <main class="game-wrap">
+    <p class="subtitle">Guess the 5-letter word in 6 tries • <span id="wordHintText">Category: ?</span></p>
+
+    <!-- Board -->
+    <div class="board" id="board"></div>
+
+    <!-- Message -->
+    <div class="message" id="message"></div>
+
+    <!-- Keyboard -->
+    <div class="keyboard" id="keyboard"></div>
+
+    <div class="actions">
+      <button id="newGameBtn">🔄 New Word</button>
+      <button id="giveUpBtn">🏳️ Give Up</button>
+    </div>
+
+    <!-- Stats Modal -->
+    <div class="modal hidden" id="statsModal">
+      <div class="modal-box">
+        <button class="close" onclick="closeModal('statsModal')">✕</button>
+        <h2>📊 Statistics</h2>
+        <div class="stats-grid">
+          <div><b id="played">0</b><span>Played</span></div>
+          <div><b id="winRate">0%</b><span>Win %</span></div>
+          <div><b id="streak">0</b><span>Streak</span></div>
+          <div><b id="maxStreak">0</b><span>Max Streak</span></div>
+        </div>
+        <h3 style="margin-top:16px">Guess Distribution</h3>
+        <div id="distribution"></div>
+        <button class="share-btn" id="shareBtn">📤 Share Result</button>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal hidden" id="helpModal">
+      <div class="modal-box">
+        <button class="close" onclick="closeModal('helpModal')">✕</button>
+        <h2>How to Play</h2>
+        <p style="line-height:1.7;margin-top:10px">Guess the <b>WORDLE</b> in 6 tries. Each guess must be a valid 5-letter word.<br><br>
+        After each guess, tiles change color:</p>
+        <div class="example"><span class="mini correct">W</span><span class="mini">O</span><span class="mini">R</span><span class="mini">D</span><span class="mini">S</span><p> = W is in word & correct spot</p></div>
+        <div class="example"><span class="mini">W</span><span class="mini present">O</span><span class="mini">R</span><span class="mini">D</span><span class="mini">S</span><p> = O is in word but wrong spot</p></div>
+        <div class="example"><span class="mini">W</span><span class="mini">O</span><span class="mini absent">R</span><span class="mini">D</span><span class="mini">S</span><p> = R not in word</p></div>
+        <p style="margin-top:10px">💡 Hint: 3 hints per game. First letter reveal hoga.</p>
+        <button class="share-btn" onclick="closeModal('helpModal')">Got it! Play →</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast">New Game!</div>
+  <script src="script.js"></script>
+</body>
+</html>
