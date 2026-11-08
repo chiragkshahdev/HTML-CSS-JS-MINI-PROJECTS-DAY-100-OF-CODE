@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Web Clone | Day-70</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Green Bar like WhatsApp Web -->
+  <div class="top-bar"></div>
+
+  <div class="app">
+    <!-- LEFT PANEL -->
+    <aside class="left">
+      <header class="left-head">
+        <div class="my-profile"><span class="avatar me">😎</span><b>You</b></div>
+        <div class="head-btns">
+          <button title="Status" id="statusBtn">◉</button>
+          <button title="New Chat" id="newChatBtn">💬+</button>
+          <button title="Dark Mode" id="darkBtn">🌙</button>
+          <button title="Menu">⋮</button>
+        </div>
+      </header>
+
+      <div class="search">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search or start new chat" />
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="unread">Unread</button>
+        <button class="filter" data-filter="favourites">Favourites</button>
+        <button class="filter" data-filter="groups">Groups</button>
+      </div>
+
+      <div class="archived" id="archivedBtn">📦 Archived <span>2</span></div>
+
+      <div class="chat-list" id="chatList"></div>
+
+      <div class="left-footer">🔒 Personal messages are end-to-end encrypted</div>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <main class="right" id="rightPanel">
+      <!-- Status View -->
+      <div class="status-view hidden" id="statusView">
+        <button class="close-status" onclick="closeStatus()">✕ Close Status</button>
+        <h2>📸 Status</h2>
+        <div class="status-list" id="statusList"></div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty" id="emptyState">
+        <img src="https://static.whatsapp.net/rsrc.php/v3/y7/r/DSxOAUB0raA.png" alt="WhatsApp" onerror="this.style.display='none'" />
+        <div class="empty-icon">💬</div>
+        <h1>WhatsApp Web</h1>
+        <p>Now send and receive messages without keeping your phone connected.</p>
+        <p class="enc">🔒 End-to-end encrypted</p>
+        <button class="start-btn" onclick="document.getElementById('searchInput').focus()">Start Chatting →</button>
+      </div>
+
+      <!-- Active Chat -->
+      <div class="chat-active hidden" id="activeChat">
+        <header class="chat-head">
+          <button id="backBtn" class="back">←</button>
+          <span class="avatar" id="chatAvatar">🌸</span>
+          <div class="chat-info"><b id="chatName">Priya</b><small id="chatStatus">online</small></div>
+          <div class="chat-head-btns">
+            <button>📹</button><button>📞</button><button>|</button>
+            <button id="searchInChatBtn">🔍</button>
+            <button id="clearBtn">🗑️</button>
+            <button id="muteBtn">🔔</button>
+          </div>
+        </header>
+
+        <div class="chat-bg">
+          <div class="messages" id="messages"></div>
+          <div class="typing hidden" id="typing"><span></span><span></span><span></span> typing...</div>
+        </div>
+
+        <div class="emoji-panel hidden" id="emojiPanel">
+          <button>😀</button><button>😂</button><button>❤️</button><button>🔥</button><button>👍</button><button>🙏</button><button>😍</button><button>🎉</button><button>😢</button><button>😎</button><button>🥳</button><button>👋</button>
+        </div>
+
+        <footer class="input-bar">
+          <button id="emojiBtn">😀</button>
+          <button>📎</button>
+          <input type="text" id="msgInput" placeholder="Type a message" autocomplete="off" />
+          <button id="micBtn">🎙️</button>
+          <button id="sendBtn" class="send">➤</button>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast">Message sent!</div>
+  <script src="script.js"></script>
+</body>
+</html>
