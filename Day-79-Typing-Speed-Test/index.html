@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test | Day-79</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">⌨️ Type<span>Speed</span></div>
+    <div class="nav-right">
+      <button id="soundBtn">🔊 Sound: ON</button>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT PANEL -->
+    <aside class="panel">
+      <h2>⌨️ Settings</h2>
+      <div class="setting-group">
+        <p><b>Time</b></p>
+        <div class="options">
+          <button class="time-opt active" data-time="15">15s</button>
+          <button class="time-opt" data-time="30">30s</button>
+          <button class="time-opt" data-time="60">60s</button>
+          <button class="time-opt" data-time="120">2 min</button>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <p><b>Difficulty</b></p>
+        <div class="options">
+          <button class="diff active" data-diff="easy">🐢 Easy</button>
+          <button class="diff" data-diff="medium">⚡ Medium</button>
+          <button class="diff" data-diff="hard">🔥 Hard</button>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <p><b>Mode</b></p>
+        <div class="options">
+          <button class="mode active" data-mode="words">Words</button>
+          <button class="mode" data-mode="sentence">Sentences</button>
+          <button class="mode" data-mode="code">Code</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span>🏆 Best WPM</span><b id="bestWpm">0</b></div>
+        <div class="stat"><span>🎯 Best Acc</span><b id="bestAcc">0%</b></div>
+        <div class="stat"><span>📝 Tests</span><b id="totalTests">0</b></div>
+        <div class="stat"><span>⭐ Avg WPM</span><b id="avgWpm">0</b></div>
+      </div>
+
+      <div class="leader">
+        <h3>📊 Recent Results</h3>
+        <div id="historyList"></div>
+      </div>
+
+      <button class="reset-btn" id="resetBtn">🔄 Reset Stats</button>
+    </aside>
+
+    <!-- MAIN TEST AREA -->
+    <section class="test-area">
+      <!-- Live Stats Bar -->
+      <div class="live-stats">
+        <div class="live-stat"><span>WPM</span><b id="liveWpm">0</b></div>
+        <div class="live-stat"><span>Accuracy</span><b id="liveAcc">100%</b></div>
+        <div class="live-stat"><span>Time</span><b id="liveTime">15</b></div>
+        <div class="live-stat"><span>Progress</span><b id="liveProgress">0%</b></div>
+      </div>
+
+      <div class="progress-bar"><div id="progressFill"></div></div>
+
+      <!-- Text to Type -->
+      <div class="text-display" id="textDisplay"></div>
+
+      <!-- Hidden Input (focus trap) -->
+      <input type="text" id="hiddenInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+
+      <div class="input-hint">👆 Click on text above & start typing. Backspace allowed.</div>
+
+      <div class="actions">
+        <button class="start-btn" id="restartBtn">🔄 New Test</button>
+        <button class="focus-btn" id="focusBtn">⌨️ Click to Focus</button>
+        <label class="check"><input type="checkbox" id="caretCheck" checked /> Show Caret</label>
+      </div>
+
+      <!-- Results -->
+      <div class="results hidden" id="results">
+        <h2>🎉 Test Complete!</h2>
+        <div class="result-grid">
+          <div class="result-card big"><span>WPM</span><b id="finalWpm">0</b><small>Words Per Minute</small></div>
+          <div class="result-card"><span>Accuracy</span><b id="finalAcc">0%</b></div>
+          <div class="result-card"><span>Correct Chars</span><b id="finalCorrect">0</b></div>
+          <div class="result-card"><span>Wrong Chars</span><b id="finalWrong">0</b></div>
+          <div class="result-card"><span>Rank</span><b id="finalRank">-</b></div>
+        </div>
+        <div class="result-msg" id="resultMsg"></div>
+        <div class="result-actions">
+          <button id="retryBtn">🔄 Try Again</button>
+          <button id="shareBtn">📤 Share Result</button>
+        </div>
+      </div>
+
+      <!-- Keyboard Visual -->
+      <div class="keyboard-hint">
+        <p>⌨️ Focus keys: <span id="nextKey">-</span> is next key</p>
+      </div>
+
+      <p class="tips">💡 Tip: Speed se zyada accuracy pe dhyan do. Galat type karne se WPM girta hai. Daily 10 min practice se 60+ WPM easy hai.</p>
+    </section>
+  </main>
+
+  <div id="toast">Test Started!</div>
+  <script src="script.js"></script>
+</body>
+</html>
