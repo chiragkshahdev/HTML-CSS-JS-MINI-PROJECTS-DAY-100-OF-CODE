@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Clone | Day-68</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">📸 InstaGram</div>
+    <input type="text" placeholder="🔍 Search" class="search" />
+    <div class="nav-icons">🏠 💬 ➕ ❤️ <b class="me">ME</b></div>
+  </header>
+
+  <main class="layout">
+    <!-- Feed -->
+    <section class="feed">
+      <!-- Stories -->
+      <div class="stories">
+        <div class="story"><div class="ring"><span>😎</span></div><p>you</p></div>
+        <div class="story"><div class="ring"><span>🌸</span></div><p>priya</p></div>
+        <div class="story"><div class="ring"><span>🔥</span></div><p>rahul</p></div>
+        <div class="story"><div class="ring"><span>✈️</span></div><p>travel</p></div>
+        <div class="story"><div class="ring"><span>🎮</span></div><p>gamer</p></div>
+        <div class="story"><div class="ring"><span>🍕</span></div><p>foodie</p></div>
+      </div>
+
+      <!-- POST 1 -->
+      <article class="post" data-post-id="1">
+        <div class="post-head">
+          <div class="user"><span class="avatar">🌸</span><div><b>priya_sharma</b><small>Virar, Maharashtra</small></div></div>
+          <button class="follow-btn" data-follow>Follow</button>
+        </div>
+
+        <div class="post-img-wrap">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" class="post-img" alt="mountain" />
+          <div class="big-heart">❤️</div>
+        </div>
+
+        <div class="actions">
+          <button class="like-btn" aria-label="like">🤍</button>
+          <button class="comment-focus">💬</button>
+          <button class="share-btn">✈️</button>
+          <button class="save-btn">🔖</button>
+        </div>
+
+        <p class="likes-count"><b><span class="like-num">1,234</span> likes</b></p>
+        <p class="caption"><b>priya_sharma</b> Mountains are calling! 🏔️ Best trip ever... <span class="more">more</span></p>
+        <p class="view-comments">View all <span class="comment-count">3</span> comments</p>
+
+        <div class="comments-list"></div>
+
+        <div class="add-comment">
+          <span class="avatar-sm">😎</span>
+          <input type="text" class="comment-input" placeholder="Add a comment..." />
+          <button class="post-comment-btn" disabled>Post</button>
+        </div>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="post" data-post-id="2">
+        <div class="post-head">
+          <div class="user"><span class="avatar">🍕</span><div><b>foodie_virar</b><small>Virar West</small></div></div>
+          <button class="follow-btn" data-follow>Follow</button>
+        </div>
+
+        <div class="post-img-wrap">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" class="post-img" alt="pizza" />
+          <div class="big-heart">❤️</div>
+        </div>
+
+        <div class="actions">
+          <button class="like-btn">🤍</button>
+          <button class="comment-focus">💬</button>
+          <button class="share-btn">✈️</button>
+          <button class="save-btn">🔖</button>
+        </div>
+
+        <p class="likes-count"><b><span class="like-num">892</span> likes</b></p>
+        <p class="caption"><b>foodie_virar</b> Best pizza in town! 🍕 Who wants? <span class="more">more</span></p>
+        <p class="view-comments">View all <span class="comment-count">2</span> comments</p>
+
+        <div class="comments-list"></div>
+
+        <div class="add-comment">
+          <span class="avatar-sm">😎</span>
+          <input type="text" class="comment-input" placeholder="Add a comment..." />
+          <button class="post-comment-btn" disabled>Post</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <span class="avatar-lg">😎</span>
+        <div><b>you_dev</b><small>Web Developer</small></div>
+        <button class="switch">Switch</button>
+      </div>
+      <div class="suggest-head"><b>Suggested for you</b><span>See All</span></div>
+      <div class="suggest"><span>🎨</span><div><b>art_daily</b><small>Followed by priya</small></div><button>Follow</button></div>
+      <div class="suggest"><span>💪</span><div><b>fit_life</b><small>New to Instagram</small></div><button>Follow</button></div>
+      <p class="sidebar-stats">❤️ Total Likes: <b id="totalLikes">0</b> • 💬 Comments: <b id="totalComments">0</b></p>
+      <button id="resetBtn" class="reset">Reset All Data</button>
+    </aside>
+  </main>
+
+  <div id="toast">Liked ❤️</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
