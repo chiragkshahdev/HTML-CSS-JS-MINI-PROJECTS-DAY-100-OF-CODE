@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Generator | Day-73</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">📄 Resume<span>Gen</span></div>
+    <div class="nav-right">
+      <button id="loadSample">✨ Load Sample</button>
+      <button id="clearBtn">🗑️ Clear</button>
+      <button id="printBtn" class="print">🖨️ Print / PDF</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: FORM -->
+    <section class="form-panel">
+      <div class="steps">
+        <button class="step active" data-step="personal">1. Personal</button>
+        <button class="step" data-step="work">2. Work & Skills</button>
+        <button class="step" data-step="design">3. Design</button>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-content" id="step-personal">
+        <h3>Personal Details</h3>
+        <input type="text" id="fName" placeholder="Full Name *" value="" />
+        <input type="text" id="fTitle" placeholder="Job Title (e.g. Frontend Developer)" />
+        <div class="row"><input type="text" id="fEmail" placeholder="Email" /><input type="text" id="fPhone" placeholder="Phone" /></div>
+        <div class="row"><input type="text" id="fLocation" placeholder="Location (Virar, Maharashtra)" /><input type="text" id="fLink" placeholder="Portfolio / LinkedIn" /></div>
+        <textarea id="fSummary" rows="3" placeholder="Professional Summary..."></textarea>
+
+        <h3 style="margin-top:16px">Education</h3>
+        <input type="text" id="fEdu" placeholder="e.g. B.Com - Mumbai University (2022-2025)" />
+        <input type="text" id="fEdu2" placeholder="e.g. 12th - HSC Board (2022) - Optional" />
+
+        <button class="next-btn" onclick="goStep('work')">Next: Work & Skills →</button>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-content hidden" id="step-work">
+        <h3>Work Experience</h3>
+        <input type="text" id="fJob1" placeholder="Job 1 - Title @ Company" />
+        <textarea id="fJob1Desc" rows="2" placeholder="What did you do? e.g. Built 72+ websites..."></textarea>
+        <input type="text" id="fJob2" placeholder="Job 2 - Title @ Company (Optional)" />
+        <textarea id="fJob2Desc" rows="2" placeholder="Job 2 description..."></textarea>
+
+        <h3 style="margin-top:16px">Skills (comma se alag karo)</h3>
+        <input type="text" id="fSkills" placeholder="HTML, CSS, JavaScript, React, Git" />
+        <div class="skill-suggest">
+          <button onclick="addSkill('HTML')">+ HTML</button>
+          <button onclick="addSkill('CSS')">+ CSS</button>
+          <button onclick="addSkill('JavaScript')">+ JavaScript</button>
+          <button onclick="addSkill('React')">+ React</button>
+          <button onclick="addSkill('Git')">+ Git</button>
+        </div>
+
+        <h3 style="margin-top:16px">Projects</h3>
+        <input type="text" id="fProj1" placeholder="Project 1 - Name + Result" />
+        <input type="text" id="fProj2" placeholder="Project 2 - Name + Result (Optional)" />
+        <input type="text" id="fProj3" placeholder="Project 3 - Name + Result (Optional)" />
+
+        <div class="row-btns"><button class="back-btn" onclick="goStep('personal')">← Back</button><button class="next-btn" onclick="goStep('design')">Next: Design →</button></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-content" id="step-design" style="display:none">
+        <h3>Choose Template</h3>
+        <div class="templates">
+          <div class="template-card active" data-template="modern" onclick="setTemplate('modern')"><div class="t-preview modern">Aa</div><p>Modern Blue</p></div>
+          <div class="template-card" data-template="classic" onclick="setTemplate('classic')"><div class="t-preview classic">Aa</div><p>Classic Black</p></div>
+          <div class="template-card" data-template="creative" onclick="setTemplate('creative')"><div class="t-preview creative">Aa</div><p>Creative Pink</p></div>
+          <div class="template-card" data-template="minimal" onclick="setTemplate('minimal')"><div class="t-preview minimal">Aa</div><p>Minimal Green</p></div>
+        </div>
+
+        <h3 style="margin-top:16px">Font Size</h3>
+        <div class="font-controls"><button onclick="changeFont(-1)">A- Smaller</button><span id="fontSizeLabel">Medium</span><button onclick="changeFont(1)">A+ Bigger</button></div>
+
+        <label class="check"><input type="checkbox" id="showPhoto" checked /> Show Photo Avatar in Resume</label>
+        <label class="check"><input type="checkbox" id="showProjects" checked /> Show Projects Section</label>
+        <label class="check"><input type="checkbox" id="showSkills" checked /> Show Skills Section</label>
+
+        <div class="row-btns"><button class="back-btn" onclick="goStep('work')">← Back</button><button class="next-btn" onclick="downloadResume()">⬇️ Download Resume</button></div>
+        <p class="tip">💡 Tip: Print button se PDF me save kar sakte ho - Destination me "Save as PDF" select karo.</p>
+      </div>
+
+      <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+      <p class="completion">Completion: <b id="completionText">0%</b> • Auto-saved in browser</p>
+    </section>
+
+    <!-- RIGHT: PREVIEW -->
+    <section class="preview-panel">
+      <p class="preview-label">👁️ LIVE PREVIEW - Real time update hota hai</p>
+      <div class="resume modern" id="resumePreview">
+        <div class="r-header">
+          <div class="r-avatar" id="pAvatar">Y</div>
+          <div><h1 id="pName">Your Name</h1><p class="r-title" id="pTitle">Your Job Title</p><p class="r-contact" id="pContact">email • phone • location</p><p class="r-link" id="pLink"></p></div>
+        </div>
+        <div class="r-body">
+          <div class="r-section"><h4>SUMMARY</h4><p id="pSummary">Write your professional summary here...</p></div>
+          <div class="r-section"><h4>EXPERIENCE</h4><div id="pExp"></div></div>
+          <div class="r-section" id="secProjects"><h4>PROJECTS</h4><div id="pProjects"></div></div>
+          <div class="r-section"><h4>EDUCATION</h4><div id="pEdu"></div></div>
+          <div class="r-section" id="secSkills"><h4>SKILLS</h4><div class="r-skills" id="pSkills"></div></div>
+        </div>
+        <div class="r-footer">Made with ResumeGen • Day-73</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast">Saved!</div>
+  <script src="script.js"></script>
+</body>
+</html>
