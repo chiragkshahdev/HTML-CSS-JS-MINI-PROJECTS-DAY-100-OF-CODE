@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme Generator | Day-85</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">😂 Meme<span>Gen</span></div>
+    <div class="nav-right">
+      <button id="randomBtn">🎲 Random Meme</button>
+      <button id="themeBtn">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: Templates -->
+    <aside class="panel">
+      <h2>🖼️ Templates</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Search meme... e.g. drake" />
+      </div>
+      <div class="templates" id="templates"></div>
+
+      <div class="upload-box">
+        <label for="uploadInput" class="upload-label">📤 Upload Your Image</label>
+        <input type="file" id="uploadInput" accept="image/*" class="hidden" />
+        <p style="font-size:12px;color:#888;margin-top:6px">JPG / PNG / WebP - Apni photo se meme banao</p>
+      </div>
+
+      <div class="trending">
+        <h3>🔥 Trending Captions</h3>
+        <div id="trendingList"></div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Canvas -->
+    <section class="editor">
+      <div class="canvas-wrap">
+        <canvas id="memeCanvas" width="600" height="600"></canvas>
+        <div class="canvas-hint">👆 Text ko drag karke move karo • Double-click to edit</div>
+      </div>
+
+      <div class="actions">
+        <button id="downloadBtn">📸 Download Meme</button>
+        <button id="copyBtn">📋 Copy Image</button>
+        <button id="shareBtn">📤 Share</button>
+        <button id="resetBtn">🔄 Reset</button>
+      </div>
+    </section>
+
+    <!-- RIGHT: Controls -->
+    <aside class="panel right-panel">
+      <h2>✏️ Edit Text</h2>
+
+      <div class="field">
+        <label>Top Text</label>
+        <input type="text" id="topText" placeholder="TOP TEXT" value="WHEN YOU SAY" />
+      </div>
+      <div class="field">
+        <label>Bottom Text</label>
+        <input type="text" id="bottomText" placeholder="BOTTOM TEXT" value="I WILL DO IT TOMORROW" />
+      </div>
+
+      <div class="field">
+        <label>Extra Text (Draggable)</label>
+        <input type="text" id="extraText" placeholder="Extra caption..." />
+        <button id="addTextBtn" class="small-btn">+ Add Text Box</button>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Font</label>
+          <select id="fontSelect">
+            <option value="Impact">Impact (Classic)</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Size: <span id="sizeVal">48px</span></label>
+          <input type="range" id="fontSize" min="20" max="100" value="48" />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Text Color</label>
+          <input type="color" id="textColor" value="#ffffff" />
+        </div>
+        <div class="field">
+          <label>Outline Color</label>
+          <input type="color" id="outlineColor" value="#000000" />
+        </div>
+        <div class="field">
+          <label>Outline: <span id="outlineVal">6px</span></label>
+          <input type="range" id="outlineSize" min="0" max="15" value="6" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Style</label>
+        <div class="options">
+          <button class="style-btn active" data-style="classic">Classic</button>
+          <button class="style-btn" data-style="top-bottom">Top/Bottom</button>
+          <button class="style-btn" data-style="caption">Caption Bar</button>
+          <button class="style-btn" data-style="none">No Text</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label><input type="checkbox" id="allCapsCheck" checked /> ALL CAPS</label>
+        <label><input type="checkbox" id="shadowCheck" checked /> Text Shadow</label>
+      </div>
+
+      <div class="history">
+        <h3>🕒 Recent Memes</h3>
+        <div id="historyList"></div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast">Meme Ready!</div>
+  <script src="script.js"></script>
+</body>
+</html>
