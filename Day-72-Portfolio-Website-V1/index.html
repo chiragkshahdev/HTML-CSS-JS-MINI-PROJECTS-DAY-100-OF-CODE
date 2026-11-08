@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Dev | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">You<span>Dev.</span></div>
+    <nav id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button id="darkBtn" title="Dark Mode">🌙</button>
+      <a href="#contact" class="hire-btn">Hire Me →</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="hello">👋 Hello, I'm</p>
+      <h1>You <span>Dev</span></h1>
+      <h2><span id="typingText"></span><span class="cursor">|</span></h2>
+      <p class="hero-desc">I build modern, responsive websites & web apps. 100 Days of Code Challenge me 72 projects complete kar chuka hu - from E-commerce to WhatsApp Clone.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work →</a>
+        <a href="#" id="downloadCV" class="btn-secondary">📄 Download CV</a>
+      </div>
+      <div class="hero-stats">
+        <div><b id="projectCount">72+</b><span>Projects</span></div>
+        <div><b>100</b><span>Days of Code</span></div>
+        <div><b>15+</b><span>Happy Clients</span></div>
+      </div>
+      <div class="socials">
+        <a href="#" onclick="showToast('GitHub: github.com/youdev')">🐙 GitHub</a>
+        <a href="#" onclick="showToast('LinkedIn: linkedin.com/in/youdev')">💼 LinkedIn</a>
+        <a href="#" onclick="showToast('Instagram: @you.dev')">📸 Instagram</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="img-card">
+        <div class="avatar-big">😎</div>
+        <div class="float-card c1">💻 72+ Projects</div>
+        <div class="float-card c2">🔥 100 Days Streak</div>
+        <div class="badge-open">🟢 Open to Work</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <p class="section-tag">About Me</p>
+    <h2>Turning Ideas Into <span>Real Websites</span></h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>👋 Who am I?</h3>
+        <p>I'm a Web Developer from Virar, Maharashtra. I started coding with HTML/CSS and now I build full frontend projects with JavaScript. My goal: become a Full Stack Developer.</p>
+        <p style="margin-top:10px">Currently: <b>Real Estate Broker in Charge</b> + <b>Web Developer</b> - dono ka combo!</p>
+        <ul class="about-list">
+          <li><b>Name:</b> You Dev</li>
+          <li><b>Location:</b> Virar, Maharashtra, India</li>
+          <li><b>Email:</b> you.dev@gmail.com</li>
+          <li><b>Available:</b> Freelance / Internship</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>🎯 What I Do</h3>
+        <div class="service"><span>🌐</span><div><b>Frontend Development</b><p>HTML, CSS, JavaScript, Responsive UI</p></div></div>
+        <div class="service"><span>🛒</span><div><b>E-commerce Websites</b><p>Product Page, Cart, Checkout</p></div></div>
+        <div class="service"><span>📱</span><div><b>App Clones</b><p>WhatsApp, Instagram, Facebook UI</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <p class="section-tag">My Skills</p>
+    <h2>Technologies I <span>Use Daily</span></h2>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <p class="section-tag">My Work</p>
+    <h2>Featured <span>Projects</span></h2>
+    <div class="project-filters">
+      <button class="p-filter active" data-filter="all">All</button>
+      <button class="p-filter" data-filter="web">Web App</button>
+      <button class="p-filter" data-filter="clone">Clone</button>
+      <button class="p-filter" data-filter="ecommerce">E-commerce</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+    <p class="more-projects">+ 65 more projects in <a href="#">100 Days of Code</a> series 🚀</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <p class="section-tag">Get In Touch</p>
+    <h2>Let's Work <span>Together</span></h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Have a project in mind? Message me, I reply within 24 hours.</p>
+        <div class="contact-item"><span>📧</span><div><b>Email</b><p>you.dev@gmail.com</p></div></div>
+        <div class="contact-item"><span>📱</span><div><b>Phone</b><p>+91 98XXX XXXXX</p></div></div>
+        <div class="contact-item"><span>📍</span><div><b>Location</b><p>Virar, Maharashtra, India</p></div></div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="cName" placeholder="Your Name *" required />
+        <input type="email" id="cEmail" placeholder="Your Email *" required />
+        <input type="text" id="cSubject" placeholder="Subject" />
+        <textarea id="cMsg" rows="4" placeholder="Your Message *" required></textarea>
+        <button type="submit" class="btn-primary">Send Message ✈️</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by <b>You Dev</b> • Day-72 Portfolio V1 • © 2026</p>
+    <button id="topBtn">↑ Back to Top</button>
+  </footer>
+
+  <div id="toast">Message sent!</div>
+  <script src="script.js"></script>
+</body>
+</html>
