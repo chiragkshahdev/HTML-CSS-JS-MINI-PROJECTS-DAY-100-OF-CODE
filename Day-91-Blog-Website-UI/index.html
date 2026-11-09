@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBlog - Stories, Tech & Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">My<span>Blog.</span></div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+    <div class="nav-actions">
+      <input type="text" id="searchInput" placeholder="Search blog..." />
+      <button id="themeBtn">🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <span class="tag">🔥 Featured Post</span>
+      <h1 id="featuredTitle">How I Learned Coding in 90 Days</h1>
+      <p id="featuredDesc">No college, no coaching. Just 1 hour daily, 90 projects, and a lot of chai. Here is my full journey.</p>
+      <div class="author">
+        <img src="https://i.pravatar.cc/80?img=12" alt="author" />
+        <div>
+          <b>Alex Sharma</b>
+          <small>Nov 9, 2026 • 6 min read</small>
+        </div>
+      </div>
+      <button class="read-btn" onclick="openBlog(1)">Read Story →</button>
+    </div>
+    <img class="hero-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="coding" />
+  </header>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="All">All</button>
+    <button class="filter-btn" data-cat="Tech">Tech</button>
+    <button class="filter-btn" data-cat="Coding">Coding</button>
+    <button class="filter-btn" data-cat="Life">Life</button>
+    <button class="filter-btn" data-cat="Travel">Travel</button>
+    <button class="filter-btn" data-cat="Money">Money</button>
+  </div>
+
+  <div id="status"></div>
+
+  <main id="blogs">
+    <h2>Latest Blogs</h2>
+    <div class="grid" id="blogGrid"></div>
+  </main>
+
+  <section id="about" class="about">
+    <img src="https://i.pravatar.cc/150?img=12" alt="me" />
+    <div>
+      <h2>Hi, I am Alex 👋</h2>
+      <p>I write about coding, life and learning. This is my 100 Days of Code journey. Day 91 is this Blog Website UI. Follow for daily projects.</p>
+      <div class="stats">
+        <div><b>91</b><span>Projects</span></div>
+        <div><b>12k</b><span>Readers</span></div>
+        <div><b>45</b><span>Blogs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <h2>Get new blogs in your inbox 📩</h2>
+    <p>No spam. Only 1 mail per week.</p>
+    <div class="news-form">
+      <input type="email" id="emailInput" placeholder="Enter your email" />
+      <button id="subscribeBtn">Subscribe</button>
+    </div>
+    <p id="newsMsg"></p>
+  </section>
+
+  <footer>© 2026 MyBlog • Made for Day 91</footer>
+
+  <!-- Blog Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
