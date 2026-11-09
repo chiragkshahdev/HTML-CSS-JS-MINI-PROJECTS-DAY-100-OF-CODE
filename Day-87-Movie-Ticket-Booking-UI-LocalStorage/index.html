@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 87 - Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎬 Day 87 Movie Booking</h1>
+      <button id="darkBtn" class="dark-btn">🌙 Dark</button>
+    </div>
+
+    <label>Movie Select Karo:</label>
+    <select id="movieSelect">
+      <option value="200">Pushpa 2 - ₹200</option>
+      <option value="250">Kalki 2898 AD - ₹250</option>
+      <option value="180">Stree 2 - ₹180</option>
+      <option value="300">Jawan - ₹300</option>
+      <option value="150">Meme Movie - ₹150</option>
+    </select>
+
+    <label>Apna Naam:</label>
+    <input id="nameInput" type="text" placeholder="Ex: Rohan">
+
+    <div class="legend">
+      <span><div class="seat"></div> Available</span>
+      <span><div class="seat selected"></div> Selected</span>
+      <span><div class="seat occupied"></div> Booked</span>
+    </div>
+
+    <div class="screen">SCREEN 📽️</div>
+
+    <div id="seatsGrid" class="seats"></div>
+
+    <p class="summary">Tune <span id="count">0</span> seats select ki | Total: ₹<span id="total">0</span></p>
+
+    <button id="bookBtn" class="book-btn">🎟️ BOOK NOW</button>
+    <button id="clearBtn" class="clear-btn">Clear My Booking</button>
+
+    <h3 style="margin-top:20px;">🎫 Meri Bookings:</h3>
+    <ul id="bookingList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
