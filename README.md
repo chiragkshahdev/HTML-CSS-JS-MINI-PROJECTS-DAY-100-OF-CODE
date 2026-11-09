@@ -44,6 +44,7 @@
 | 28 | Memory Flip Card Game | [Code](./Day-28-Memory-Flip-Card-Game) |
 | 29 | 3D Cube Rotation | [Code](./Day-29-3D-Cube-Rotation) |
 | 30 | 3D Flip Login Form | [Code](./Day-30-3D-Flip-Login-Form) |
+| 31 | Solar System Pure CSS | [Code](./Day-31-Solar-System-Pure-CSS) |
 ---
 
 ## 🗺️ COMPLETE ROADMAP - DAY 1 TO DAY 100
