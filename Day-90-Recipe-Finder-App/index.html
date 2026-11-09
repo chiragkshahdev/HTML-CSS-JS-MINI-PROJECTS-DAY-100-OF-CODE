@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🍔 Recipe Finder</h1>
+    <p>Search 300+ recipes from around the world</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search recipe... e.g. chicken, pasta, paneer" />
+    <button id="searchBtn">Search</button>
+    <button id="randomBtn">Surprise Me 🎲</button>
+  </div>
+
+  <div class="filters" id="categoryFilters">
+    <button class="filter-btn active" data-cat="All">All</button>
+    <button class="filter-btn" data-cat="Chicken">Chicken</button>
+    <button class="filter-btn" data-cat="Beef">Beef</button>
+    <button class="filter-btn" data-cat="Vegetarian">Vegetarian</button>
+    <button class="filter-btn" data-cat="Dessert">Dessert</button>
+    <button class="filter-btn" data-cat="Seafood">Seafood</button>
+    <button class="filter-btn" data-cat="Pasta">Pasta</button>
+  </div>
+
+  <div id="status">Type a dish name and press Search...</div>
+  <div class="grid" id="recipeGrid"></div>
+
+  <!-- Recipe Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>Made for Day 90 • Data: TheMealDB API</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
