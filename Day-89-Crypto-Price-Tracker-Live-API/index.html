@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Price Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🪙 Crypto Price Tracker</h1>
+    <p>Live prices from CoinGecko API • Auto refresh every 30s</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search coin... e.g. bitcoin" />
+    <select id="currencySelect">
+      <option value="usd">USD ($)</option>
+      <option value="inr">INR (₹)</option>
+      <option value="eur">EUR (€)</option>
+    </select>
+    <button id="refreshBtn">Refresh 🔄</button>
+  </div>
+
+  <div id="status">Loading live prices...</div>
+
+  <div class="stats">
+    <div class="card">Total Coins: <span id="totalCoins">0</span></div>
+    <div class="card">Last Updated: <span id="lastUpdated">-</span></div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Coin</th>
+          <th>Price</th>
+          <th>24h Change</th>
+          <th>Market Cap</th>
+          <th>24h Volume</th>
+        </tr>
+      </thead>
+      <tbody id="coinTable"></tbody>
+    </table>
+  </div>
+
+  <footer>Made for Day 89 • Data: CoinGecko Public API</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
