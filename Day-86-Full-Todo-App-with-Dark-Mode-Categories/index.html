@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 86 - Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Day 86 Todo ✅</h1>
+      <button id="darkBtn" class="dark-btn">🌙 Dark</button>
+    </div>
+
+    <input id="taskInput" type="text" placeholder="Naya kaam likh... ex: Lab assignment">
+    
+    <div class="row">
+      <select id="catInput">
+        <option>College</option>
+        <option>Personal</option>
+        <option>Work</option>
+        <option>Meme</option>
+      </select>
+      <select id="priorityInput">
+        <option>Normal 🟢</option>
+        <option>Important 🔴</option>
+      </select>
+    </div>
+
+    <button id="addBtn" class="add-btn">+ ADD TODO</button>
+
+    <input id="searchInput" type="text" placeholder="🔍 Search kaam...">
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="All">All</button>
+      <button class="filter-btn" data-filter="College">College</button>
+      <button class="filter-btn" data-filter="Personal">Personal</button>
+      <button class="filter-btn" data-filter="Work">Work</button>
+      <button class="filter-btn" data-filter="Meme">Meme</button>
+    </div>
+
+    <ul id="list"></ul>
+    <p id="count"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
