@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">📊 Dash<span>Pro</span></div>
+      <nav>
+        <a href="#" class="active">🏠 Dashboard</a>
+        <a href="#">📈 Analytics</a>
+        <a href="#">👥 Customers</a>
+        <a href="#">🛒 Orders</a>
+        <a href="#">💰 Revenue</a>
+        <a href="#">📦 Products</a>
+        <a href="#">⚙️ Settings</a>
+      </nav>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="user" />
+        <div>
+          <b>Alex Sharma</b>
+          <small>Admin</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <header>
+        <div>
+          <h1>Good Morning, Alex 👋</h1>
+          <p>Here is what is happening today</p>
+        </div>
+        <div class="header-actions">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <select id="rangeSelect">
+            <option value="7">Last 7 Days</option>
+            <option value="30">Last 30 Days</option>
+            <option value="90">Last 90 Days</option>
+          </select>
+          <button id="themeBtn">🌙</button>
+        </div>
+      </header>
+
+      <!-- Stats Cards -->
+      <div class="stats">
+        <div class="stat-card blue">
+          <p>Total Revenue</p>
+          <h2 id="revenueVal">₹4,82,000</h2>
+          <span class="up">▲ 12.5% vs last month</span>
+        </div>
+        <div class="stat-card green">
+          <p>Total Users</p>
+          <h2 id="usersVal">24,580</h2>
+          <span class="up">▲ 8.2% vs last month</span>
+        </div>
+        <div class="stat-card orange">
+          <p>Total Orders</p>
+          <h2 id="ordersVal">3,420</h2>
+          <span class="up">▲ 5.4% vs last month</span>
+        </div>
+        <div class="stat-card purple">
+          <p>Conversion Rate</p>
+          <h2 id="conversionVal">4.8%</h2>
+          <span class="down">▼ 0.3% vs last month</span>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts">
+        <div class="chart-box large">
+          <div class="chart-head">
+            <h3>Revenue Overview</h3>
+            <span class="live">● Live</span>
+          </div>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <div class="chart-head">
+            <h3>Traffic Sources</h3>
+          </div>
+          <canvas id="doughnutChart"></canvas>
+          <div class="legend">
+            <span><i class="dot blue"></i> Google 45%</span>
+            <span><i class="dot green"></i> Instagram 30%</span>
+            <span><i class="dot orange"></i> Direct 15%</span>
+            <span><i class="dot purple"></i> Others 10%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom">
+        <div class="table-box">
+          <h3>Recent Orders</h3>
+          <table>
+            <thead>
+              <tr><th>Customer</th><th>Product</th><th>Amount</th><th>Status</th></tr>
+            </thead>
+            <tbody id="orderTable"></tbody>
+          </table>
+        </div>
+        <div class="top-box">
+          <h3>Top Products</h3>
+          <div id="topProducts"></div>
+        </div>
+      </div>
+
+      <footer>Made for Day 92 • DashPro Analytics</footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

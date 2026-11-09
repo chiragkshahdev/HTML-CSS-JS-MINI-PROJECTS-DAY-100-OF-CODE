@@ -1,0 +1,78 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+:root { --bg: #f1f5f9; --card: #ffffff; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; }
+body.dark { --bg: #0f172a; --card: #1e293b; --text: #f1f5f9; --muted: #94a3b8; --border: #334155; }
+
+body { background: var(--bg); color: var(--text); transition: 0.3s; }
+.layout { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  width: 230px; background: #111827; color: #fff; padding: 22px 16px;
+  display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh;
+}
+.logo { font-size: 22px; font-weight: 900; margin-bottom: 30px; padding-left: 8px; }
+.logo span { color: #818cf8; }
+.sidebar nav { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.sidebar nav a { color: #d1d5db; text-decoration: none; padding: 11px 12px; border-radius: 10px; font-size: 14px; }
+.sidebar nav a.active, .sidebar nav a:hover { background: #1f2937; color: #fff; }
+.profile { display: flex; gap: 10px; align-items: center; border-top: 1px solid #374151; padding-top: 14px; }
+.profile img { width: 40px; height: 40px; border-radius: 50%; }
+.profile small { color: #9ca3af; }
+
+/* Main */
+main { flex: 1; padding: 22px; }
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+header h1 { font-size: 24px; }
+header p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.header-actions input, .header-actions select { padding: 9px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--text); outline: none; }
+.header-actions button { padding: 9px 12px; border-radius: 10px; border: none; cursor: pointer; background: var(--card); font-size: 16px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.stat-card { background: var(--card); padding: 18px; border-radius: 14px; border-left: 5px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+.stat-card.green { border-color: #22c55e; }
+.stat-card.orange { border-color: #f59e0b; }
+.stat-card.purple { border-color: #a855f7; }
+.stat-card p { color: var(--muted); font-size: 13px; }
+.stat-card h2 { font-size: 26px; margin: 8px 0; }
+.up { color: #16a34a; font-size: 13px; font-weight: bold; }
+.down { color: #dc2626; font-size: 13px; font-weight: bold; }
+
+/* Charts */
+.charts { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; margin-bottom: 18px; }
+.chart-box { background: var(--card); padding: 18px; border-radius: 14px; }
+.chart-box.large { min-height: 320px; }
+.chart-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.live { color: #16a34a; font-size: 13px; font-weight: bold; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; font-size: 12px; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.dot.blue { background: #3b82f6; }
+.dot.green { background: #22c55e; }
+.dot.orange { background: #f59e0b; }
+.dot.purple { background: #a855f7; }
+
+/* Bottom */
+.bottom { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+.table-box, .top-box { background: var(--card); padding: 18px; border-radius: 14px; }
+.table-box h3, .top-box h3 { margin-bottom: 14px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; text-align: left; font-size: 14px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.badge.success { background: #dcfce7; color: #16a34a; }
+.badge.pending { background: #fef9c3; color: #ca8a04; }
+.badge.failed { background: #fee2e2; color: #dc2626; }
+
+.product-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.product-row small { color: var(--muted); display: block; }
+.progress { height: 7px; background: #e2e8f0; border-radius: 10px; margin-top: 6px; overflow: hidden; }
+.progress i { display: block; height: 100%; border-radius: 10px; }
+
+footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 18px; }
+
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .charts, .bottom { grid-template-columns: 1fr; }
+}
