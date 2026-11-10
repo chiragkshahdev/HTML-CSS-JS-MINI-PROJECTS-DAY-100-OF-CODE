@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOUR NAME | 100 Days Of Code - Mega Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">YOUR NAME<span>.dev</span></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#projects">All 99 Projects</a>
+      <a href="#certificate">Certificate</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button onclick="toggleTheme()">🌙 Theme</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <p class="badge">🏆 100 DAYS OF CODE - COMPLETED</p>
+    <h1>I Completed <span>100 Days</span><br>Of Code. Here Is Proof.</h1>
+    <p class="hero-desc">BSCIT First Year Student from Virar. From Hello World to Avengers Portal, Krrish Universe, Iron Man vs Krrish Game. All 99 projects in one place.</p>
+    <div class="stats">
+      <div><b id="totalCount">99</b><p>Projects</p></div>
+      <div><b>100</b><p>Days</p></div>
+      <div><b>100%</b><p>Consistency</p></div>
+      <div><b>1</b><p>Developer</p></div>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="scrollToProjects()">View All 99 Projects ↓</button>
+      <button class="btn-secondary" onclick="showCertificate()">Get Certificate 🏆</button>
+    </div>
+  </section>
+
+  <!-- SEARCH + FILTER -->
+  <section id="projects" class="section">
+    <h2>All 99 Projects - Mega Collection</h2>
+    <p class="section-sub">Search any project. Click to open.</p>
+
+    <input type="text" id="searchInput" placeholder="🔍 Search - Example: ChatGPT, Krrish, YouTube, Calculator..." onkeyup="renderProjects()">
+
+    <div class="filter-btns">
+      <button onclick="setFilter('all', this)" class="active">All (99)</button>
+      <button onclick="setFilter('basic', this)">Basic (1-30)</button>
+      <button onclick="setFilter('intermediate', this)">Intermediate (31-60)</button>
+      <button onclick="setFilter('clone', this)">Clones (61-95)</button>
+      <button onclick="setFilter('game', this)">Games & Fun (96-100)</button>
+    </div>
+
+    <p id="resultCount">Showing 99 projects</p>
+
+    <div id="projectsGrid" class="projects-grid"></div>
+    <div id="noResult" style="display:none;">No project found. Try another keyword like Calculator, Krrish, ChatGPT.</div>
+  </section>
+
+  <!-- CERTIFICATE -->
+  <section id="certificate" class="section cert-section">
+    <h2>🏆 My Certificate</h2>
+    <div class="certificate-box">
+      <p class="cert-top">100 DAYS OF CODE</p>
+      <h3>CERTIFICATE OF COMPLETION</h3>
+      <p>This certificate is proudly presented to</p>
+      <h2 class="cert-name">YOUR NAME</h2>
+      <p>For successfully completing 100 Days Of Code - 99 Projects<br>From Day 1 to Day 100 with 100% Consistency</p>
+      <div class="cert-footer">
+        <div><b>YOUR NAME</b><p>Student - BSCIT First Year</p></div>
+        <div><b>⭐⭐⭐⭐⭐</b><p>100 / 100</p></div>
+        <div><b>2026</b><p>Virar, India</p></div>
+      </div>
+      <button onclick="printCertificate()">🖨️ Print / Save Certificate</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Hire Me / Collaborate</h2>
+    <p class="section-sub">I am open for Internship, Freelance Websites, and Collabs.</p>
+    <div class="contact-links">
+      <a href="#" target="_blank">GitHub</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="mailto:yourname@gmail.com">Email Me</a>
+    </div>
+    <p class="thanks">Thank you for visiting my 100 Days Journey. Day 1 to Day 100 - I did it.</p>
+  </section>
+
+  <footer>
+    <p>© 2026 YOUR NAME | Day 100 / 100 | Mega Portfolio - All 99 Projects</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
