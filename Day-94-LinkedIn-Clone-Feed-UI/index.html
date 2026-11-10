@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 94 - LinkedIn Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">in</div>
+      <input type="text" placeholder="🔍 Search">
+    </div>
+    <div class="nav-right">
+      <span>🏠 Home</span>
+      <span>👥 My Network</span>
+      <span>💼 Jobs</span>
+      <span>💬 Messaging</span>
+      <span>🔔 Notifications</span>
+      <span class="nav-profile">👤 Me</span>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- LEFT PROFILE CARD -->
+    <div class="left">
+      <div class="profile-card">
+        <div class="cover"></div>
+        <div class="profile-img">👤</div>
+        <h3>BSCIT Student</h3>
+        <p>First Year | Virar, Maharashtra</p>
+        <hr>
+        <p>👀 Profile views: <b>120</b></p>
+        <p>🔗 Connections: <b>16</b></p>
+        <hr>
+        <p>⭐ My Items</p>
+      </div>
+      <div class="profile-card">
+        <h4>Recent Hashtags</h4>
+        <p>#100DaysOfCode</p>
+        <p>#HTML #CSS #JavaScript</p>
+        <p>#BSCIT</p>
+      </div>
+    </div>
+
+    <!-- CENTER FEED -->
+    <div class="center">
+      <!-- POST BOX -->
+      <div class="post-box">
+        <div class="post-input-row">
+          <div class="small-avatar">👤</div>
+          <input type="text" id="postInput" placeholder="Start a post...">
+        </div>
+        <button onclick="addPost()">Post</button>
+      </div>
+
+      <!-- FEED POSTS -->
+      <div id="feed">
+        <div class="post">
+          <div class="post-header">
+            <div class="small-avatar">👨‍💻</div>
+            <div>
+              <b>Rahul Sharma</b>
+              <p>Software Developer | 2nd Year</p>
+            </div>
+          </div>
+          <p class="post-text">Day 94 / 100 - Aaj maine LinkedIn Clone banaya! HTML CSS JS alag-alag file me. 100 Days Of Code almost complete! 🔥 #100DaysOfCode</p>
+          <img src="https://via.placeholder.com/600x300/0A66C2/ffffff?text=Day+94+LinkedIn+Clone" alt="post image">
+          <div class="post-actions">
+            <span onclick="likePost(this)">👍 Like (<b>0</b>)</span>
+            <span onclick="focusComment(this)">💬 Comment</span>
+            <span>↗️ Share</span>
+          </div>
+          <div class="comment-box">
+            <input type="text" placeholder="Add a comment..." onkeypress="if(event.key==='Enter') addComment(this)">
+            <div class="comments"></div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <div class="small-avatar">👩‍💻</div>
+            <div>
+              <b>Anca Kovach</b>
+              <p>QA Engineer since 2022</p>
+            </div>
+          </div>
+          <p class="post-text">QA is not just about finding bugs, it's about making product better. Manual testing + Automation = Best combo.</p>
+          <div class="post-actions">
+            <span onclick="likePost(this)">👍 Like (<b>0</b>)</span>
+            <span onclick="focusComment(this)">💬 Comment</span>
+            <span>↗️ Share</span>
+          </div>
+          <div class="comment-box">
+            <input type="text" placeholder="Add a comment..." onkeypress="if(event.key==='Enter') addComment(this)">
+            <div class="comments"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SUGGESTIONS -->
+    <div class="right">
+      <div class="profile-card">
+        <h4>Add to your feed</h4>
+        <div class="suggest">
+          <div class="small-avatar">👨</div>
+          <div><b>Sunny Deol</b><p>Actor</p><button onclick="followBtn(this)">+ Follow</button></div>
+        </div>
+        <div class="suggest">
+          <div class="small-avatar">👩</div>
+          <div><b>Hema Malini</b><p>Actor</p><button onclick="followBtn(this)">+ Follow</button></div>
+        </div>
+        <div class="suggest">
+          <div class="small-avatar">👨‍💻</div>
+          <div><b>Code With Harry</b><p>Teacher</p><button onclick="followBtn(this)">+ Follow</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
