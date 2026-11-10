@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 96 - Krrish Universe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🦸 KRRISH <span>UNIVERSE</span></div>
+    <div class="nav-links">
+      <span onclick="scrollToSection('home')">Home</span>
+      <span onclick="scrollToSection('powers')">Powers</span>
+      <span onclick="scrollToSection('villains')">Villains</span>
+      <span onclick="scrollToSection('jadoo')">Jadoo</span>
+    </div>
+    <button class="join-btn" onclick="joinUniverse()">Join Universe</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="tag">DAY 96 / 100 DAYS OF CODE</p>
+      <h1>Main Hu <span>KRRISH</span><br>India Ka Superhero</h1>
+      <p>Jab jab duniya pe musibat aayegi, Krrish wapas aayega. Rohit se Krrish tak ka safar, aur ab tumhara safar.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="becomeKrrish()">🦸 Become Krrish</button>
+        <button class="btn-secondary" onclick="callJadoo()">👽 Call Jadoo</button>
+      </div>
+      <p id="krrishMsg" class="krrish-msg"></p>
+    </div>
+    <div class="hero-img">
+      <div class="krrish-card">
+        <div class="krrish-emoji">🦸‍♂️</div>
+        <h3>KRRISH</h3>
+        <p>Real Name: Krishna Mehra</p>
+        <p>Power Level: <span id="powerLevel">100</span>/100</p>
+        <div class="power-bar"><div id="powerFill" class="power-fill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POWERS SECTION -->
+  <section id="powers" class="section">
+    <h2>⚡ Krrish Ki Powers</h2>
+    <p>Click karke power use karo!</p>
+    <div class="powers-grid">
+      <div class="power-card" onclick="usePower('Super Speed', 90)">
+        <div class="power-icon">💨</div>
+        <h3>Super Speed</h3>
+        <p>Bike se tez, hawa se tez. Virar se Churchgate 2 minute me.</p>
+        <button>Use Power</button>
+      </div>
+      <div class="power-card" onclick="usePower('Super Strength', 95)">
+        <div class="power-icon">💪</div>
+        <h3>Super Strength</h3>
+        <p>Truck utha le, building rok le. Gym ki zaroorat nahi.</p>
+        <button>Use Power</button>
+      </div>
+      <div class="power-card" onclick="usePower('Flying', 100)">
+        <div class="power-icon">🦅</div>
+        <h3>Flying</h3>
+        <p>Bina aeroplane ke udna. Mumbai ka traffic kabhi nahi milega.</p>
+        <button>Use Power</button>
+      </div>
+      <div class="power-card" onclick="usePower('Mind Reading', 85)">
+        <div class="power-icon">🧠</div>
+        <h3>Mind Reading</h3>
+        <p>Teacher kya puchne wali hai, pehle hi pata chal jayega.</p>
+        <button>Use Power</button>
+      </div>
+    </div>
+    <div id="powerResult" class="result-box">Koi ek Power dabake dekho...</div>
+  </section>
+
+  <!-- VILLAINS SECTION -->
+  <section id="villains" class="section dark-section">
+    <h2>😈 Villains - Inse Bachke Rehna</h2>
+    <div class="villains-grid">
+      <div class="villain-card">
+        <div class="villain-emoji">👽</div>
+        <h3>Kaal</h3>
+        <p>Power: Apne aap ko copy karna</p>
+        <p>Weakness: Krrish ka punch</p>
+        <button onclick="fightVillain('Kaal')">Fight Kaal ⚔️</button>
+      </div>
+      <div class="villain-card">
+        <div class="villain-emoji">🦹</div>
+        <h3>Dr. Siddhant Arya</h3>
+        <p>Power: Jadoo ko pakadna</p>
+        <p>Weakness: Jadoo ki dhoop</p>
+        <button onclick="fightVillain('Dr. Siddhant Arya')">Fight Arya ⚔️</button>
+      </div>
+      <div class="villain-card">
+        <div class="villain-emoji">🐍</div>
+        <h3>Kaal's Army</h3>
+        <p>Power: 1000 mutants</p>
+        <p>Weakness: Ek saath Krrish ka entry</p>
+        <button onclick="fightVillain('Kaal Army')">Fight Army ⚔️</button>
+      </div>
+    </div>
+    <div id="fightResult" class="result-box">Villain se ladne ke liye Fight dabao...</div>
+  </section>
+
+  <!-- JADOO SECTION -->
+  <section id="jadoo" class="section jadoo-section">
+    <h2>👽 Jadoo - Mera Dost</h2>
+    <div class="jadoo-box">
+      <div id="jadooEmoji" class="jadoo-emoji">👽</div>
+      <h3 id="jadooText">Jadoo so raha hai... Uthao usko!</h3>
+      <button class="btn-primary" onclick="callJadoo()">🌞 Jadoo ko Uthao</button>
+      <button class="btn-secondary" onclick="jadooDance()">💃 Jadoo Dance</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by BSCIT Student - Virar | Day 96 / 100 | Krrish Universe - Fan Made Website</p>
+    <p>Krrish is a Bollywood character. This is a fan project for learning.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
