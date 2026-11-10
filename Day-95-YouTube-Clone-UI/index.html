@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 95 - YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="menu">☰</span>
+      <div class="logo">▶️ <b>YouTube</b> <sup>IN</sup></div>
+    </div>
+    <div class="nav-center">
+      <input type="text" id="searchInput" placeholder="Search" onkeypress="if(event.key==='Enter') searchVideo()">
+      <button onclick="searchVideo()">🔍</button>
+      <span class="mic">🎙️</span>
+    </div>
+    <div class="nav-right">
+      <span>➕ Create</span>
+      <span>🔔 <b id="notifCount">9+</b></span>
+      <span class="profile">👤</span>
+    </div>
+  </nav>
+
+  <!-- CATEGORY CHIPS -->
+  <div class="chips">
+    <button class="chip active" onclick="filterChip(this)">All</button>
+    <button class="chip" onclick="filterChip(this)">HTML</button>
+    <button class="chip" onclick="filterChip(this)">CSS</button>
+    <button class="chip" onclick="filterChip(this)">JavaScript</button>
+    <button class="chip" onclick="filterChip(this)">BSCIT</button>
+    <button class="chip" onclick="filterChip(this)">100 Days Of Code</button>
+    <button class="chip" onclick="filterChip(this)">Music</button>
+  </div>
+
+  <div class="container">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <p class="side-item active">🏠 Home</p>
+      <p class="side-item">⚡ Shorts</p>
+      <p class="side-item">📺 Subscriptions</p>
+      <hr>
+      <p class="side-item">🕘 History</p>
+      <p class="side-item">▶️ Playlists</p>
+      <p class="side-item">👍 Liked Videos</p>
+      <hr>
+      <h4>Subscriptions</h4>
+      <p class="side-item">👨‍💻 Code With Harry</p>
+      <p class="side-item">👨‍💻 Apna College</p>
+      <p class="side-item">👩‍💻 Anca Kovach</p>
+      <p class="side-item">👤 BSCIT Student</p>
+    </div>
+
+    <!-- VIDEO GRID -->
+    <div class="main">
+      <div id="videoGrid" class="video-grid">
+        <!-- Video Card 1 -->
+        <div class="video-card" data-title="html css full course">
+          <img src="https://via.placeholder.com/320x180/FF0000/ffffff?text=HTML+CSS+Course" onclick="playVideo('HTML CSS Full Course in Hindi')">
+          <div class="video-info">
+            <div class="channel">👨‍💻</div>
+            <div>
+              <b>HTML CSS Full Course | Day 95</b>
+              <p>Code With Harry • 1M views • 2 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="video-card" data-title="javascript">
+          <img src="https://via.placeholder.com/320x180/0A66C2/ffffff?text=JavaScript+Tutorial" onclick="playVideo('JavaScript Tutorial for Beginners')">
+          <div class="video-info">
+            <div class="channel">👨‍💻</div>
+            <div>
+              <b>JavaScript in 1 Video - BSCIT Students</b>
+              <p>Apna College • 500K views • 1 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="video-card" data-title="100 days of code">
+          <img src="https://via.placeholder.com/320x180/10A37F/ffffff?text=100+Days+Of+Code" onclick="playVideo('My 100 Days Of Code Journey')">
+          <div class="video-info">
+            <div class="channel">👤</div>
+            <div>
+              <b>My 100 Days Of Code Journey - Day 95</b>
+              <p>BSCIT Student • 10K views • 5 hours ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 4 -->
+        <div class="video-card" data-title="bscit">
+          <img src="https://via.placeholder.com/320x180/FF9800/ffffff?text=BSCIT+First+Year" onclick="playVideo('BSCIT First Year - Kya Padhu?')">
+          <div class="video-info">
+            <div class="channel">👨‍🏫</div>
+            <div>
+              <b>BSCIT First Year - Kya Padhu? Full Guide</b>
+              <p>College Wala • 200K views • 1 month ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 5 -->
+        <div class="video-card" data-title="music">
+          <img src="https://via.placeholder.com/320x180/9C27B0/ffffff?text=LoFi+Music" onclick="playVideo('LoFi Music for Coding')">
+          <div class="video-info">
+            <div class="channel">🎵</div>
+            <div>
+              <b>LoFi Music for Coding - 3 Hours</b>
+              <p>LoFi Girl • 2M views • 3 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 6 -->
+        <div class="video-card" data-title="chatgpt clone">
+          <img src="https://via.placeholder.com/320x180/000000/ffffff?text=ChatGPT+Clone" onclick="playVideo('Day 93 - ChatGPT Clone UI')">
+          <div class="video-info">
+            <div class="channel">🤖</div>
+            <div>
+              <b>Day 93 - ChatGPT Clone UI Banaya</b>
+              <p>BSCIT Student • 5K views • 2 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER AREA -->
+      <div id="player" class="player" style="display:none;">
+        <h2 id="playerTitle">Video Title</h2>
+        <div class="player-box">▶️ Playing Video... (Demo Player)</div>
+        <div class="player-actions">
+          <button onclick="likeVideo()">👍 Like (<span id="likeCount">0</span>)</button>
+          <button onclick="subscribeVideo()" id="subBtn">🔴 Subscribe</button>
+          <button onclick="closePlayer()">❌ Close</button>
+        </div>
+        <p>Ye Day 95 ka demo player hai. Asli video Day 100 ke baad add karenge.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

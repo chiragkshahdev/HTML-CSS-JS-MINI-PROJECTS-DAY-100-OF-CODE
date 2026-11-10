@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: white; }
+
+/* NAVBAR */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; position: sticky; top: 0; background: white; z-index: 10; }
+.nav-left { display: flex; gap: 15px; align-items: center; font-size: 20px; }
+.menu { cursor: pointer; }
+.logo { display: flex; gap: 2px; align-items: center; font-size: 20px; }
+.logo sup { font-size: 10px; color: #666; }
+.nav-center { display: flex; align-items: center; gap: 10px; flex: 1; max-width: 600px; margin: 0 20px; }
+.nav-center input { flex: 1; padding: 10px 15px; border: 1px solid #ccc; border-radius: 20px 0 0 20px; outline: none; font-size: 15px; }
+.nav-center button { padding: 10px 20px; border: 1px solid #ccc; border-left: none; border-radius: 0 20px 20px 0; cursor: pointer; background: #f8f8f8; }
+.mic { background: #f2f2f2; padding: 10px; border-radius: 50%; cursor: pointer; }
+.nav-right { display: flex; gap: 20px; align-items: center; cursor: pointer; }
+.profile { background: #ddd; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+
+/* CHIPS */
+.chips { display: flex; gap: 10px; padding: 10px 20px; overflow-x: auto; position: sticky; top: 55px; background: white; }
+.chip { padding: 8px 14px; border: none; border-radius: 8px; background: #f2f2f2; cursor: pointer; white-space: nowrap; }
+.chip.active { background: black; color: white; }
+
+/* LAYOUT */
+.container { display: flex; }
+.sidebar { width: 220px; padding: 10px; flex-shrink: 0; }
+.side-item { padding: 10px; border-radius: 10px; cursor: pointer; font-size: 15px; }
+.side-item:hover, .side-item.active { background: #f2f2f2; }
+.sidebar hr { margin: 10px 0; border: 0.5px solid #eee; }
+.sidebar h4 { padding: 10px; }
+
+/* VIDEO GRID */
+.main { flex: 1; padding: 10px; }
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.video-card { cursor: pointer; }
+.video-card img { width: 100%; border-radius: 12px; }
+.video-info { display: flex; gap: 10px; margin-top: 10px; }
+.channel { width: 35px; height: 35px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.video-info p { font-size: 13px; color: #666; margin-top: 4px; }
+
+/* PLAYER */
+.player { background: #f9f9f9; padding: 20px; border-radius: 12px; margin-top: 20px; }
+.player-box { background: black; color: white; height: 250px; display: flex; align-items: center; justify-content: center; font-size: 22px; border-radius: 10px; margin: 15px 0; }
+.player-actions { display: flex; gap: 10px; margin-bottom: 10px; }
+.player-actions button { padding: 10px 16px; border-radius: 20px; border: 1px solid #ccc; cursor: pointer; background: white; }
