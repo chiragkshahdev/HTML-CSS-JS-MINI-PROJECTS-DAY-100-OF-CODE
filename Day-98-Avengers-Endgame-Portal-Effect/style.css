@@ -1,0 +1,90 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #0A0A1A; color: white; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #111132; position: sticky; top: 0; z-index: 10; }
+.navbar button { background: #FFD700; border: none; padding: 10px 16px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+.logo { font-size: 20px; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: #FFD700; }
+.nav-center { font-size: 13px; color: #aaa; letter-spacing: 2px; }
+
+.story { text-align: center; padding: 30px 20px 10px 20px; }
+.story h1 { font-size: 32px; margin-bottom: 10px; }
+.story p { color: #aaa; }
+
+.battlefield { position: relative; min-height: 450px; background: linear-gradient(180deg, #1A1A1A, #0A0A1A); border-top: 2px solid #FF9800; border-bottom: 2px solid #FF9800; padding: 20px; overflow: hidden; }
+.battle-bg { text-align: center; color: #555; font-size: 12px; letter-spacing: 3px; }
+
+.thanos-side { position: absolute; top: 50px; right: 40px; text-align: center; }
+.cap-side { position: absolute; top: 50px; left: 40px; text-align: center; }
+.character { font-size: 110px; transition: 0.3s; }
+.thanos-char { filter: drop-shadow(0 0 20px #9C27B0); }
+.cap-char { filter: drop-shadow(0 0 20px #0A66C2); }
+.char-name { font-weight: bold; margin-top: 5px; letter-spacing: 2px; }
+.thanos-side p, .cap-side p { color: #bbb; font-size: 13px; margin-top: 5px; font-style: italic; }
+
+.health-bar { background: #333; height: 20px; border-radius: 10px; width: 180px; margin: 10px auto; position: relative; overflow: hidden; border: 1px solid white; }
+.health-fill { height: 100%; width: 100%; background: #9C27B0; transition: width 0.5s; }
+.health-bar span { position: absolute; top: 2px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: bold; }
+
+/* PORTALS */
+.portals-area { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 180px; }
+.portal { width: 90px; height: 90px; border-radius: 50%; border: 6px solid #FF9800; position: relative; display: flex; align-items: center; justify-content: center; font-size: 30px; animation: spin 2s linear infinite, portalOpen 0.5s ease; box-shadow: 0 0 30px #FF9800, inset 0 0 20px #FF9800; background: radial-gradient(circle, #FF9800, #000); }
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes portalOpen {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.portal span { animation: spinReverse 2s linear infinite; }
+@keyframes spinReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* HEROES */
+.heroes-army { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+.hero-card { background: #1A1A4A; padding: 15px; border-radius: 15px; text-align: center; border: 2px solid #FFD700; animation: heroEntry 0.6s ease; min-width: 110px; }
+@keyframes heroEntry {
+  0% { transform: translateY(30px) scale(0.5); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.hero-card .hero-emoji { font-size: 45px; }
+.hero-card h4 { margin: 8px 0 4px 0; font-size: 14px; }
+.hero-card p { font-size: 11px; color: #aaa; }
+
+.hero-card.attacking { animation: heroAttack 0.4s; border-color: #FF0000; }
+@keyframes heroAttack {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px) scale(1.2); }
+  100% { transform: translateX(0); }
+}
+
+.thanos-char.dying { animation: snapDust 1.5s forwards; }
+@keyframes snapDust {
+  0% { opacity: 1; transform: scale(1); filter: blur(0); }
+  50% { opacity: 0.5; transform: scale(1.1) rotate(10deg); filter: blur(2px); }
+  100% { opacity: 0; transform: scale(0.5) translateY(-30px); filter: blur(5px); }
+}
+
+/* CONTROLS */
+.controls { display: flex; gap: 15px; justify-content: center; padding: 25px; flex-wrap: wrap; }
+.controls button { padding: 15px 25px; border: none; border-radius: 12px; font-weight: bold; font-size: 16px; cursor: pointer; }
+.btn-portal { background: #FF9800; color: black; }
+.btn-assemble { background: #0A66C2; color: white; }
+.btn-snap { background: #FF0000; color: white; }
+.controls button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.battle-log { background: #222; max-width: 800px; margin: 0 auto 20px auto; padding: 15px; border-radius: 10px; text-align: center; border: 1px dashed #FFD700; }
+
+.winner-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.winner-box { background: #1A1A4A; padding: 40px; border-radius: 20px; text-align: center; border: 3px solid #FFD700; }
+.winner-emoji { font-size: 80px; }
+.winner-box h2 { margin: 15px 0 10px 0; }
+.winner-box button { background: #FFD700; border: none; padding: 12px 20px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+.love { color: #FF5555; font-weight: bold; margin-top: 10px; }
+
+footer { text-align: center; padding: 25px; color: #777; font-size: 13px; }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 98 - Avengers Endgame Portal Effect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="navbar">
+    <div class="logo">🅰️ AVENGERS <span>ENDGAME</span></div>
+    <div class="nav-center">DAY 98 / 100 - PORTAL EFFECT</div>
+    <button onclick="resetBattle()">🔄 Reset</button>
+  </nav>
+
+  <!-- STORY TEXT -->
+  <div class="story">
+    <h1 id="storyTitle">Thanos has Arrived... Avengers is Losing...</h1>
+    <p id="storySub">Captain America is alone. Now we have final hope - Doctor Strange Portals!</p>
+  </div>
+
+  <!-- BATTLEFIELD -->
+  <div id="battlefield" class="battlefield">
+    <div class="battle-bg">BATTLEFIELD - EARTH - FINAL WAR</div>
+
+    <!-- THANOS SIDE -->
+    <div class="thanos-side">
+      <div id="thanosChar" class="character thanos-char">😈</div>
+      <div class="char-name">THANOS</div>
+      <div class="health-bar">
+        <div id="thanosHealth" class="health-fill thanos-health"></div>
+        <span id="thanosHPText">100 HP</span>
+      </div>
+      <p class="thanos-dialog" id="thanosDialog">"I am Inevitable!"</p>
+    </div>
+
+    <!-- CAPTAIN SIDE -->
+    <div class="cap-side">
+      <div class="character cap-char">🛡️</div>
+      <div class="char-name">CAPTAIN AMERICA</div>
+      <p>"Avengers... Assemble!"</p>
+    </div>
+
+    <!-- PORTALS AREA -->
+    <div id="portalsArea" class="portals-area"></div>
+
+    <!-- HEROES ARMY -->
+    <div id="heroesArmy" class="heroes-army"></div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button class="btn-portal" onclick="openPortals()">🌀 Open Portals - Doctor Strange</button>
+    <button class="btn-assemble" onclick="assembleAvengers()" id="assembleBtn" disabled>⚡ AVENGERS ASSEMBLE!</button>
+    <button class="btn-snap" onclick="snapThanos()" id="snapBtn" disabled>👌 Iron Man Snap!</button>
+  </div>
+
+  <!-- LOG -->
+  <div id="battleLog" class="battle-log">Doctor Strange portal is Opening Ready...</div>
+
+  <!-- WINNER POPUP -->
+  <div id="winnerPopup" class="winner-popup" style="display:none;">
+    <div class="winner-box">
+      <div class="winner-emoji">🏆</div>
+      <h2>AVENGERS Has Winned!</h2>
+      <p id="winnerSub">Thanos snap ! 3000 times love you!</p>
+      <p class="love">❤️ I Love You 3000 ❤️</p>
+      <button onclick="resetBattle()">🔄 Play Once Again</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Day 98 / 100 | Made by BSCIT Student - Virar | Fan Made - Avengers Endgame Portal Effect</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
