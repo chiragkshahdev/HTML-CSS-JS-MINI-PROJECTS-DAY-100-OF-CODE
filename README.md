@@ -14,37 +14,37 @@
 
 | Day | Project | Code |
 |---|---|---|
-| 01 | Krrish Character - Plane Rescue | [Code](./Day-01-Krrish-Character/) |
-| 02 | Typewriter Effect | [Code](./Day-02-Typewriter-Effect/) |
-| 03 | 3D Tilt Card | [Code](./Day-03-3D-Tilt-Card/) |
-| 04 | Custom Cursor | [Code](./Day-04-Custom-Cursor/) |
-| 05 | Glowing Button Hover | [Code](./Day-05-Glowing-Button/) |
-| 06 | Parallax Scroll Effect | [Code](./Day-06-Parallax-Scroll/) |
-| 07 | Counter App | [Code](./Day-07-Counter-App/) |
-| 08 | Color Flipper | [Code](./Day-08-Color-Flipper/) |
-| 09 | Responsive Navbar | [Code](./Day-09-Responsive-Navbar/) |
-| 10 | Digital Clock | [Code](./Day-10-Digital-Clock/) |
-| 11 | Calculator | [Code](./Day-11-Calculator/) |
-| 12 | Todo List App | [Code](./Day-12-Todo-List-App/) |
-| 13 | Quiz App | [Code](./Day-13-Quiz-App/) |
-| 14 | Weather Card UI | [Code](./Day-14-Weather-Card-UI/) |
-| 15 | Image Slider | [Code](./Day-15-Image-Slider) |
-| 16 | Iron Man Arc Reactor | [Code](./Day-16-Iron-Man-Arc-Reactor) |
-| 17 | Avengers Logo Animation | [Code](./Day-17-Avengers-Logo-Animation/) |
-| 18 | Glassmorphism Profile Card | [Code](./Day-18-Glassmorphism-Profile-Card/) |
-| 19 | Neumorphism Dashboard | [Code](./Day-19-Neumorphism-Dashboard) |
-| 20 | Spiderman Web Shooter Effect | [Code](./Day-20-Spiderman-Web-Shooter-Effect) |
-| 21 | Krrish Mask Loader | [Code](./Day-21-Krrish-Mask-Loader) |
-| 22 | Bouncing Ball Physics | [Code](./Day-22-Bouncing-Ball-Physics) |
-| 23 | Falling Aeroplane | [Code](./Day-23-Falling-Aeroplane) |
-| 24 | Flying Hero Krrish | [Code](./Day-24-Flying-Hero-Krrish) |
-| 25 | Smoke Effect | [Code](./Day-25-Smoke-Effect) |
-| 26 | Rock Paper Scissors UI | [Code](./Day-26-Rock-Paper-Scissors-UI) |
-| 27 | Tic Tac Toe Game | [Code](./Day-27-Tic-Tac-Toe-Game) |
-| 28 | Memory Flip Card Game | [Code](./Day-28-Memory-Flip-Card-Game) |
-| 29 | 3D Cube Rotation | [Code](./Day-29-3D-Cube-Rotation) |
-| 30 | 3D Flip Login Form | [Code](./Day-30-3D-Flip-Login-Form) |
-| 31 | Solar System Pure CSS | [Code](./Day-31-Solar-System-Pure-CSS) |
+| 01 | Krrish Character - Plane Rescue | [Code](./Day-001-Krrish-Character/) |
+| 02 | Typewriter Effect | [Code](./Day-002-Typewriter-Effect/) |
+| 03 | 3D Tilt Card | [Code](./Day-003-3D-Tilt-Card/) |
+| 04 | Custom Cursor | [Code](./Day-004-Custom-Cursor/) |
+| 05 | Glowing Button Hover | [Code](./Day-005-Glowing-Button/) |
+| 06 | Parallax Scroll Effect | [Code](./Day-006-Parallax-Scroll/) |
+| 07 | Counter App | [Code](./Day-007-Counter-App/) |
+| 08 | Color Flipper | [Code](./Day-008-Color-Flipper/) |
+| 09 | Responsive Navbar | [Code](./Day-009-Responsive-Navbar/) |
+| 10 | Digital Clock | [Code](./Day-010-Digital-Clock/) |
+| 11 | Calculator | [Code](./Day-011-Calculator/) |
+| 12 | Todo List App | [Code](./Day-012-Todo-List-App/) |
+| 13 | Quiz App | [Code](./Day-013-Quiz-App/) |
+| 14 | Weather Card UI | [Code](./Day-014-Weather-Card-UI/) |
+| 15 | Image Slider | [Code](./Day-015-Image-Slider) |
+| 16 | Iron Man Arc Reactor | [Code](./Day-016-Iron-Man-Arc-Reactor) |
+| 17 | Avengers Logo Animation | [Code](./Day-017-Avengers-Logo-Animation/) |
+| 18 | Glassmorphism Profile Card | [Code](./Day-018-Glassmorphism-Profile-Card/) |
+| 19 | Neumorphism Dashboard | [Code](./Day-019-Neumorphism-Dashboard) |
+| 20 | Spiderman Web Shooter Effect | [Code](./Day-020-Spiderman-Web-Shooter-Effect) |
+| 21 | Krrish Mask Loader | [Code](./Day-021-Krrish-Mask-Loader) |
+| 22 | Bouncing Ball Physics | [Code](./Day-022-Bouncing-Ball-Physics) |
+| 23 | Falling Aeroplane | [Code](./Day-023-Falling-Aeroplane) |
+| 24 | Flying Hero Krrish | [Code](./Day-024-Flying-Hero-Krrish) |
+| 25 | Smoke Effect | [Code](./Day-025-Smoke-Effect) |
+| 26 | Rock Paper Scissors UI | [Code](./Day-026-Rock-Paper-Scissors-UI) |
+| 27 | Tic Tac Toe Game | [Code](./Day-027-Tic-Tac-Toe-Game) |
+| 28 | Memory Flip Card Game | [Code](./Day-028-Memory-Flip-Card-Game) |
+| 29 | 3D Cube Rotation | [Code](./Day-029-3D-Cube-Rotation) |
+| 30 | 3D Flip Login Form | [Code](./Day-030-3D-Flip-Login-Form) |
+| 31 | Solar System Pure CSS | [Code](./Day-031-Solar-System-Pure-CSS) |
 ---
 
 ## 🗺️ COMPLETE ROADMAP - DAY 1 TO DAY 100
