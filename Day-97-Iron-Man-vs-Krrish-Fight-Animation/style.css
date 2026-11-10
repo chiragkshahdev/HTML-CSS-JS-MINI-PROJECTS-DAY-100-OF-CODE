@@ -1,0 +1,87 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background: #0A0A1A; color: white; overflow-x: hidden; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #111132; position: sticky; top: 0; z-index: 10; }
+.navbar button { background: #FFD700; border: none; padding: 10px 16px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+.nav-center { font-size: 20px; font-weight: bold; letter-spacing: 2px; }
+.nav-center span { color: #FF0000; font-size: 24px; margin: 0 10px; }
+
+.scoreboard { display: flex; justify-content: space-between; padding: 15px 30px; background: #1A1A4A; font-size: 16px; }
+
+/* ARENA */
+.arena { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 40px; min-height: 400px; background: linear-gradient(180deg, #1A1A4A, #0A0A1A); border-bottom: 3px solid #FFD700; transition: 0.1s; }
+.arena-bg { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: #555; font-weight: bold; letter-spacing: 3px; font-size: 13px; }
+.arena.shake { animation: shake 0.3s; }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.fighter { width: 30%; text-align: center; }
+.fighter-name { font-size: 22px; font-weight: bold; margin-bottom: 10px; }
+.country { font-size: 14px; color: #aaa; }
+.health-bar { background: #333; height: 25px; border-radius: 15px; position: relative; overflow: hidden; margin-bottom: 15px; border: 2px solid white; }
+.health-fill { height: 100%; width: 100%; transition: width 0.5s; }
+.krrish-health { background: linear-gradient(90deg, #FFD700, #FFAA00); }
+.iron-health { background: linear-gradient(90deg, #FF0000, #FF5555); }
+.health-bar span { position: absolute; top: 3px; left: 50%; transform: translateX(-50%); font-size: 13px; font-weight: bold; color: white; text-shadow: 1px 1px 2px black; }
+
+.character { font-size: 130px; transition: 0.2s; cursor: pointer; }
+.krrish-char { filter: drop-shadow(0 0 20px #FFD700); }
+.iron-char { filter: drop-shadow(0 0 20px #FF0000); }
+
+.character.attack { animation: attackMove 0.4s; }
+.character.hit { animation: hitMove 0.4s; }
+.character.win { animation: winDance 1s infinite; }
+.character.dead { opacity: 0.3; filter: grayscale(1); transform: rotate(90deg); }
+
+@keyframes attackMove {
+  0% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(40px) scale(1.2); }
+  100% { transform: translateX(0) scale(1); }
+}
+@keyframes hitMove {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-20px) rotate(-10deg); }
+  50% { transform: translateX(20px) rotate(10deg); }
+  100% { transform: translateX(0); }
+}
+@keyframes winDance {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px) scale(1.1); }
+  100% { transform: translateY(0); }
+}
+
+.energy { margin-top: 10px; color: #FFD700; font-weight: bold; }
+
+.vs-center { text-align: center; width: 35%; }
+.vs-text { font-size: 70px; font-weight: bold; color: #FF0000; text-shadow: 0 0 20px #FF0000; }
+.fight-log { background: #222; padding: 15px; border-radius: 10px; margin-top: 15px; min-height: 60px; border: 1px solid #444; }
+.damage-text { font-size: 30px; font-weight: bold; color: #FFD700; margin-top: 10px; min-height: 35px; }
+
+/* CONTROLS */
+.controls { display: flex; gap: 20px; padding: 30px; max-width: 1100px; margin: 0 auto; }
+.control-box { flex: 1; background: #1A1A4A; padding: 25px; border-radius: 15px; }
+.control-box h3 { margin-bottom: 5px; }
+.control-box p { color: #aaa; font-size: 13px; margin-bottom: 15px; }
+.control-box button { display: block; width: 100%; padding: 13px; margin: 8px 0; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 15px; }
+.btn-punch { background: #FFD700; color: black; }
+.btn-kick { background: #FF9800; color: white; }
+.btn-special { background: #FF0000; color: white; }
+.btn-heal { background: #00FF88; color: black; }
+.iron-controls button { background: #FF0000; color: white; }
+.note { margin-top: 10px; }
+
+/* WINNER */
+.winner-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.winner-box { background: #1A1A4A; padding: 40px; border-radius: 20px; text-align: center; border: 3px solid #FFD700; max-width: 450px; }
+.winner-emoji { font-size: 80px; }
+.winner-box h2 { font-size: 32px; margin: 15px 0 10px 0; }
+.winner-box p { color: #aaa; margin-bottom: 20px; }
+.winner-box button { background: #FFD700; border: none; padding: 12px 20px; border-radius: 10px; font-weight: bold; cursor: pointer; margin: 5px; }
+
+footer { text-align: center; padding: 25px; color: #777; font-size: 13px; }

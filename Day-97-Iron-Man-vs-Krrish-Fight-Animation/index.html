@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 97 - Iron Man vs Krrish - PRO Fight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="navbar">
+    <div class="logo">⚔️ <b>VS</b> ARENA</div>
+    <div class="nav-center">IRON MAN <span>VS</span> KRRISH</div>
+    <button onclick="resetFight()">🔄 Restart Fight</button>
+  </nav>
+
+  <!-- SCORE BOARD -->
+  <div class="scoreboard">
+    <div class="score">🏆 Krrish Wins: <b id="krrishWins">0</b></div>
+    <div class="score">Round: <b id="roundNum">1</b> / 3</div>
+    <div class="score">🏆 Iron Man Wins: <b id="ironWins">0</b></div>
+  </div>
+
+  <!-- FIGHT ARENA -->
+  <div id="arena" class="arena">
+    <div class="arena-bg">MUMBAI STADIUM - LIVE FIGHT</div>
+
+    <!-- KRRISH SIDE -->
+    <div class="fighter krrish-side">
+      <div class="fighter-name">🦸 KRRISH <span class="country">🇮🇳 INDIA</span></div>
+      <div class="health-bar">
+        <div id="krrishHealth" class="health-fill krrish-health"></div>
+        <span id="krrishHPText">100 HP</span>
+      </div>
+      <div id="krrishChar" class="character krrish-char">🦸‍♂️</div>
+      <div class="energy">⚡ Energy: <span id="krrishEnergy">100</span></div>
+    </div>
+
+    <!-- VS CENTER -->
+    <div class="vs-center">
+      <div id="vsText" class="vs-text">VS</div>
+      <div id="fightLog" class="fight-log">Fight shuru karne ke liye attack dabao!</div>
+      <div id="damageText" class="damage-text"></div>
+    </div>
+
+    <!-- IRON MAN SIDE -->
+    <div class="fighter iron-side">
+      <div class="fighter-name">🤖 IRON MAN <span class="country">🇺🇸 USA</span></div>
+      <div class="health-bar">
+        <div id="ironHealth" class="health-fill iron-health"></div>
+        <span id="ironHPText">100 HP</span>
+      </div>
+      <div id="ironChar" class="character iron-char">🤖</div>
+      <div class="energy">⚡ Energy: <span id="ironEnergy">100</span></div>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="control-box krrish-controls">
+      <h3>🦸 Krrish Controls</h3>
+      <p>Tu Krrish hai - Tu hi ladega</p>
+      <button class="btn-punch" onclick="krrishAttack('punch')">👊 Punch - 10 Damage</button>
+      <button class="btn-kick" onclick="krrishAttack('kick')">🦶 Flying Kick - 15 Damage</button>
+      <button class="btn-special" onclick="krrishAttack('special')">⚡ Krrish Special - 25 Damage</button>
+      <button class="btn-heal" onclick="krrishHeal()">💚 Jadoo Heal +20 HP</button>
+    </div>
+
+    <div class="control-box iron-controls">
+      <h3>🤖 Iron Man - Auto / Computer</h3>
+      <p>Iron Man khud ladega - Jarvis Control</p>
+      <button onclick="ironAutoAttack()">🤖 Jarvis, Attack Karo!</button>
+      <p class="note">Ya Krrish ke attack ke baad Iron Man khud jawab dega!</p>
+    </div>
+  </div>
+
+  <!-- WINNER POPUP -->
+  <div id="winnerPopup" class="winner-popup" style="display:none;">
+    <div class="winner-box">
+      <div id="winnerEmoji" class="winner-emoji">🏆</div>
+      <h2 id="winnerText">Krrish Jeet Gaya!</h2>
+      <p id="winnerSub">India ka Superhero jeet gaya!</p>
+      <button onclick="nextRound()">➡️ Next Round</button>
+      <button onclick="resetFight()">🔄 New Match</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Day 97 / 100 | Made by BSCIT Student - Virar | Fan Made Game - Iron Man vs Krrish</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
