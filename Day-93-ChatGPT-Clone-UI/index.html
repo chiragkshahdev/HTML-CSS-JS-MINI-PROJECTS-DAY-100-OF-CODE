@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 93 - ChatGPT Clone UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <button onclick="newChat()">+ New Chat</button>
+    <div class="chat-history">💬 Day 92 - To-Do App</div>
+    <div class="chat-history">💬 Day 91 - Weather App</div>
+    <div class="chat-history">💬 Day 90 - Calculator</div>
+    <div class="user">👤 BSCIT Student - Virar</div>
+  </div>
+
+  <!-- MAIN CHAT AREA -->
+  <div class="main">
+    <div class="chat-area" id="chatArea">
+      <div class="msg">
+        <div class="avatar ai-avatar">AI</div>
+        <div>Hi! I Am Your ChatGPT Clone.</div>
+      </div>
+    </div>
+
+    <div class="input-box">
+      <div class="input-inner">
+        <input type="text" id="userInput" placeholder="Message ChatGPT...">
+        <button onclick="sendMsg()">➤</button>
+      </div>
+    </div>
+    <div class="note">Day 93 | 100 Days Of Code | Made by BSCIT Student</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
