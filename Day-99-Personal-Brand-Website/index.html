@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOUR NAME | BSCIT Developer | 100 Days Of Code</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">YOUR NAME<span>.dev</span></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()">🌙 Dark / Light</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="badge">● Available for Internships & Freelance</p>
+      <h1>Hi, I am <span>YOUR NAME</span><br>Frontend Developer</h1>
+      <p class="hero-desc">BSCIT First Year Student from Virar, Maharashtra. I completed <b>99 Days Of Code</b>. I build clean, fast and beautiful websites with HTML, CSS and JavaScript.</p>
+      <div class="hero-btns">
+        <a href="#projects"><button class="btn-primary">View My Work ↓</button></a>
+        <button class="btn-secondary" onclick="downloadResume()">Download Resume 📄</button>
+      </div>
+      <div class="hero-stats">
+        <div><b>99</b><p>Days Of Code</p></div>
+        <div><b>20+</b><p>Projects Built</p></div>
+        <div><b>100%</b><p>Consistency</p></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="profile-img">👤</div>
+      <h2>YOUR NAME</h2>
+      <p class="role">BSCIT Student | Frontend Developer</p>
+      <p>📍 Virar, Maharashtra, India</p>
+      <div class="socials">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Instagram</a>
+      </div>
+      <p class="quote">"Day 1 I knew nothing. Day 99 I build anything."</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p class="section-sub">My story in 3 lines</p>
+    <div class="about-box">
+      <p>I am a BSCIT First Year student. I started coding with zero knowledge. In 99 days, I built ChatGPT Clone, LinkedIn Clone, YouTube Clone, Krrish Universe, Iron Man vs Krrish Game, and Avengers Portal Effect.</p>
+      <p>My goal is simple: Become a great Software Developer, get a PPO, and build products people love.</p>
+      <div class="about-tags">
+        <span>Hardworking</span><span>Consistent</span><span>Fast Learner</span><span>Problem Solver</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>My Skills</h2>
+    <p class="section-sub">What I can do for you</p>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>HTML</h3><div class="skill-bar"><div class="fill" style="width:95%"></div></div><p>95%</p></div>
+      <div class="skill-card"><h3>CSS</h3><div class="skill-bar"><div class="fill" style="width:90%"></div></div><p>90%</p></div>
+      <div class="skill-card"><h3>JavaScript</h3><div class="skill-bar"><div class="fill" style="width:85%"></div></div><p>85%</p></div>
+      <div class="skill-card"><h3>Git & GitHub</h3><div class="skill-bar"><div class="fill" style="width:80%"></div></div><p>80%</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Top Projects</h2>
+    <p class="section-sub">My best work from 100 Days Of Code</p>
+    <div class="filter-btns">
+      <button onclick="filterProjects('all', this)" class="active">All</button>
+      <button onclick="filterProjects('clone', this)">Clones</button>
+      <button onclick="filterProjects('game', this)">Games</button>
+      <button onclick="filterProjects('fun', this)">Fun</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-type="clone"><div class="proj-img">🤖</div><h3>Day 93 - ChatGPT Clone</h3><p>Chat UI with fake AI reply and typing effect.</p><span>HTML CSS JS</span></div>
+      <div class="project-card" data-type="clone"><div class="proj-img">💼</div><h3>Day 94 - LinkedIn Clone</h3><p>Feed UI with Like, Comment, Post and Follow.</p><span>HTML CSS JS</span></div>
+      <div class="project-card" data-type="clone"><div class="proj-img">📺</div><h3>Day 95 - YouTube Clone</h3><p>Video grid with search, filter and player.</p><span>HTML CSS JS</span></div>
+      <div class="project-card" data-type="fun"><div class="proj-img">🦸</div><h3>Day 96 - Krrish Universe</h3><p>Superhero website with powers and Jadoo.</p><span>HTML CSS JS</span></div>
+      <div class="project-card" data-type="game"><div class="proj-img">⚔️</div><h3>Day 97 - Iron Man vs Krrish</h3><p>Fighting game with health bar and animation.</p><span>Game Logic</span></div>
+      <div class="project-card" data-type="fun"><div class="proj-img">🌀</div><h3>Day 98 - Avengers Portal</h3><p>Endgame portal effect with Avengers Assemble.</p><span>Animation</span></div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="section">
+    <h2>My 100 Days Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item"><b>Day 1</b><p>Started with Hello World. Did not know anything.</p></div>
+      <div class="timeline-item"><b>Day 30</b><p>Built first portfolio and learned GitHub.</p></div>
+      <div class="timeline-item"><b>Day 93-95</b><p>Built ChatGPT, LinkedIn, YouTube Clones.</p></div>
+      <div class="timeline-item"><b>Day 96-98</b><p>Built Krrish, Fight Game, Avengers Portal.</p></div>
+      <div class="timeline-item highlight"><b>Day 99</b><p>Personal Brand Website - This website you are seeing.</p></div>
+      <div class="timeline-item highlight"><b>Day 100</b><p>Finale Coming Tomorrow...</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <h2>Let's Work Together</h2>
+    <p class="section-sub">Want a website? Want to collaborate? Message me.</p>
+    <div class="contact-box">
+      <input type="text" id="contactName" placeholder="Your Name">
+      <input type="text" id="contactMsg" placeholder="Your Message - Example: I want a website">
+      <button onclick="sendMessage()">Send Message →</button>
+      <p id="contactResult"></p>
+    </div>
+    <div class="contact-links">
+      <p>📧 Email: yourname@gmail.com</p>
+      <p>📍 Virar, Maharashtra, India</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 YOUR NAME | Day 99 / 100 | Built with HTML CSS JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
