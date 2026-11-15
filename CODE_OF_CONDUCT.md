@@ -76,8 +76,8 @@ If someone breaks the rules:
 
 ## Contact
 
-If you face any problem, please contact me here:
-LinkedIn: [Tera LinkedIn Link]
+If you face any problem, please contact me here:<br>
+LinkedIn: [https://www.linkedin.com/in/chirag-kiran-shah-466007438/]<br>
 GitHub: Open an Issue in this repository
 
 Please do not share personal information like phone number or private email here.
